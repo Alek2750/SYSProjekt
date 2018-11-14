@@ -23,5 +23,6 @@ return (
 );
 }
 }
+//Navbaren er bare en liste uden CSS styling
 
 export default NaviBar;
