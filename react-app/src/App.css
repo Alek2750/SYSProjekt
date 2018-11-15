@@ -22,11 +22,14 @@
   color: #61dafb;
 }
 
-li {
-  display: inline;
-  color: turquoise;
-  background-color: crimson;
-  margin: 10px;
+nav {
+  display: inline-block;
+  color: black;
+  background-color: blue;
+}
+
+div{
+  color: black;
 }
 
 @keyframes App-logo-spin {
