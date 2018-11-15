@@ -9,6 +9,10 @@ class LogIn extends Component {
         evt.preventDefault();
         this.props.login(this.state.username, this.state.password);
     }
+    register = (evt) => {
+        evt.preventDefault();
+        facade.register(this.state.username, this.state.password);
+    }
     onChange = (evt) => {
         this.setState({ [evt.target.id]: evt.target.value })
     }
@@ -16,10 +20,11 @@ class LogIn extends Component {
         return (
             <div>
                 <h2>Login</h2>
-                <form onSubmit={this.login} onChange={this.onChange} >
+                <form onChange={this.onChange} >
                     <input placeholder="User Name" id="username" />
-                    <input placeholder="Password" id="password" />
-                    <button>Login</button>
+                    <input type="password" placeholder="Password" id="password" />
+                    <button onClick={this.login}>Login</button>
+                    <button onClick={this.register}>Register</button>
                 </form>
             </div>
         )
@@ -30,7 +35,7 @@ class LoggedIn extends Component {
         super(props);
         this.state = { dataFromServer: "Fetching!!" };
     }
-    componentDidMount() {facade.fetchData().then(res=> this.setState({dataFromServer: res}));}
+    componentDidMount() { facade.fetchData().then(res => this.setState({ dataFromServer: res })); }
     render() {
         return (
             <div>
@@ -51,8 +56,12 @@ class Jwt extends Component {
     } //TODO
     login = (user, pass) => {
         facade.login(user, pass)
-        .then(res => this.setState({ loggedIn: true }));
+            .then(res => this.setState({ loggedIn: true }));
     } //TODO
+    register = (user, pass) => {
+        facade.register(user, pass)
+        .then(res => this.setState({ loggedIn: true }));
+    }
     render() {
         return (
             <div>

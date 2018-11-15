@@ -40,7 +40,14 @@ class ApiFacade {
 
     login = (user, pass) => {
         const options = this.makeOptions("POST", true, { username: user, password: pass });
-        return fetch(URL + "/api/login", options, true)
+        return fetch(URL + "/api/login", options)
+            .then(handleHttpErrors)
+            .then(res => { this.setToken(res.token) })
+    }
+
+    register = (user, pass) => {
+        const options = this.makeOptions("POST", true, { username: user, password: pass });
+        return fetch(URL + "/api/register", options)
             .then(handleHttpErrors)
             .then(res => { this.setToken(res.token) })
     }
