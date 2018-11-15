@@ -5,7 +5,7 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.Headline}>Welcome page</Text>
+        <Text style={styles.Headline}> Welcome page </Text>
         <ButtonHandler/>
       </View>
     );
@@ -37,8 +37,8 @@ const styles = StyleSheet.create({
   },
   Headline: {
     color: 'blue',
-    fontWeight: 'bold',
-    fontSize: 30,
+    fontWeight: "400",
+    fontSize: 30
   },
 });
 
