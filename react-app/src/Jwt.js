@@ -1,16 +1,19 @@
 import React, { Component } from "react"
 import facade from "./apiFacade";
 
+export let user = 'Not logged in';
+
 class LogIn extends Component {
     constructor(props) {
         super(props);
         this.state = { username: "", password: "" }
     }
     login = (evt) => {
+        user=this.state.username;
         evt.preventDefault();
         this.props.login(this.state.username, this.state.password);
     }
-    register = (evt) => {
+    register = (evt) => {        
         evt.preventDefault();
         facade.register(this.state.username, this.state.password);
     }
@@ -22,7 +25,7 @@ class LogIn extends Component {
             <div>
                 <h2>Login</h2>
                 <form onChange={this.onChange} >
-                    <input placeholder="User Name" id="username" />
+                    <input placeholder="Username" id="username" />
                     <input type="password" placeholder="Password" id="password" />
                     <button onClick={this.login}>Login</button>
                     <button onClick={this.register}>Register</button>
@@ -78,4 +81,6 @@ class Jwt extends Component {
         )
     }
 }
+
+
 export default Jwt;

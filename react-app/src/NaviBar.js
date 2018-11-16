@@ -4,6 +4,7 @@ import './App.css';
 import { Navbar, NavItem } from "react-bootstrap";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Login from './Jwt.js';
+import {user} from './Jwt.js';
 //Note: 'npm install react-bootstrap --save' kan forekomme nødvendigt 
 
 
@@ -30,7 +31,7 @@ class NaviBar extends Component {
                         <NavItem href="/Data">
                             <div>Data</div>
                         </NavItem>
-                        You are logged in as: {Login.user()}
+                        You are logged in as: {user}
         </Navbar>
 
                     <Route exact path="/" component={Home} />
@@ -45,6 +46,5 @@ class NaviBar extends Component {
     }
 }
 //CSS'en forbundet til App.css
-
 
 export default NaviBar;
