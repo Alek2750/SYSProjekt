@@ -3,7 +3,7 @@ Dette CA3 projekt er udført på 3. semester ved Datamatiker uddannelsen CPHBusi
 
 #### Projektet består af tre primære dele: Backend, React-app & React-native-app.
 
-**Backend køres ved:** Åben projektet i et udvalgt IDE tool og "Run" projektet.
+**Backend køres ved:** Åben projektet i et udvalgt IDE tool og "Clean/Build" - derefter "Run" projektet.
 
 **React-app køres ved:** I mappen, åben en kommando konsol (Git bash, Cmd prompt eller lign.) gennemse filen "NaviBar.js" og installér de nødvendige plugins. Derefter kør `npm start` i konsollen for at køre projektet. 
 
