@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import facade from "./apiFacade";
+
 class LogIn extends Component {
     constructor(props) {
         super(props);
@@ -46,6 +47,9 @@ class LoggedIn extends Component {
     }
 }
 class Jwt extends Component {
+    user = () => {
+        return 'Not logged in';
+    }
     constructor(props) {
         super(props);
         this.state = { loggedIn: false }
@@ -60,7 +64,7 @@ class Jwt extends Component {
     } //TODO
     register = (user, pass) => {
         facade.register(user, pass)
-        .then(res => this.setState({ loggedIn: true }));
+            .then(res => this.setState({ loggedIn: true }));
     }
     render() {
         return (

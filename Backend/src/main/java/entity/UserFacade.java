@@ -17,13 +17,14 @@ public class UserFacade {
     //Default EntityManagerFactory
     EntityManagerFactory emf = Persistence.createEntityManagerFactory("pu");
     private static final UserFacade instance = new UserFacade();
-    
-    private UserFacade(){}
-    
-    public static UserFacade getInstance(){
+
+    private UserFacade() {
+    }
+
+    public static UserFacade getInstance() {
         return instance;
     }
-    
+
     public User getVeryfiedUser(String username, String password) throws AuthenticationException {
         EntityManager em = emf.createEntityManager();
         User user;
@@ -38,4 +39,15 @@ public class UserFacade {
         return user;
     }
 
+    public User registerUser(String username, String password) {
+        EntityManager em = emf.createEntityManager();
+        Role userRole = em.find(Role.class, "user");
+        em.getTransaction().begin();
+        User user = new User(username, password);
+        user.addRole(userRole);
+        em.persist(user);
+        em.getTransaction().commit();
+        em.close();
+        return user;
+       }
 }
