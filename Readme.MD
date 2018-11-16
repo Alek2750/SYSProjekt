@@ -13,5 +13,5 @@ npm install -g expo-cli
 npm start
 ```
 Virker dette ikke i Git Bash, bør der prøves en alternativ kommando konsol (f.eks. cmd prompt). 
-QR-koden der kommer op på skærmen scannes med 'Expo' App'en.
+QR-koden der kommer frem i browseren scannes med 'Expo' App'en.
 
