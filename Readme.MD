@@ -1,5 +1,5 @@
 # SemesterProjekt3Sem
-Dette CA3 projekt er udført på 3. semester ved Datamatiker uddannelsen CPHBusiness Lyngby. Udarbejdet fra d. 13-11-2018 til d. 18-11-2018 af Alessandro, Johachim, Michael og Morten.
+Dette System udviklingsprojekt er udført på 3. semester af studerene på Datamatiker uddannelsen på CPHBusiness Lyngby. Udarbejdet fra d. 19-11-2018 til d. 16-12-2018 af Alessandro, Johachim, Michael og Morten.
 
 #### Projektet består af tre primære dele: Backend, React-app & React-native-app.
 
