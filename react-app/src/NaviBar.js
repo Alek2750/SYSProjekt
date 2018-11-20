@@ -5,7 +5,8 @@ import { Navbar, NavItem } from "react-bootstrap";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Login from './Jwt.js';
 import {user} from './Jwt.js';
-//Note: 'npm install react-bootstrap --save' kan forekomme nødvendigt 
+//Note: 'npm install react-bootstrap --save' kan forekomme nødvendigt
+//Note: 'npm install react-router-dom --save' kan forekomme nødvendigt 
 
 
 const Home = () => <div><h1>Welcome to the page! Please Login to continue</h1></div>
