@@ -27,7 +27,7 @@ class Selector extends React.Component {
         <div onClick={this.select} >
           <a href="#" id="a1"> Render All</a>
           <a href="#" id="a2"> Paginate on Client</a>
-          <a href="#" id="a3"> AppClient med table </a>
+          <a href="#" id="a3"> AppClient person liste </a>
           <a href="#" id="a4"> Jwt side </a>
           <a href="#" id="a5"> NaviBar side </a> 
         </div>
