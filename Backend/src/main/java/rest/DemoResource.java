@@ -34,7 +34,7 @@ public class DemoResource {
         String user = securityContext.getUserPrincipal().getName();
         return "\"Hello from USER: " + user + "\"";
     }
-
+//TEST
     @POST
     @Produces(MediaType.APPLICATION_JSON)
     @RolesAllowed("admin")
