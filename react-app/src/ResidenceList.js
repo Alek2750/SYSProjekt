@@ -107,7 +107,7 @@ class ResidenceList extends Component {
 
     render() {
         return <div>
-            <h4>The list of names from AppClient</h4>
+            <h4>Boliger</h4>
             <BootstrapTable
                 striped
                 hover
