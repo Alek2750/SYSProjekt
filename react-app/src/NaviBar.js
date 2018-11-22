@@ -5,6 +5,7 @@ import { Navbar, NavItem } from "react-bootstrap";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Login from './Jwt.js';
 import {user} from './Jwt.js';
+import AppClient from "./AppClientPagination";
 //Note: 'npm install react-bootstrap --save' kan forekomme nødvendigt
 //Note: 'npm install react-router-dom --save' kan forekomme nødvendigt 
 
@@ -26,11 +27,14 @@ class NaviBar extends Component {
                         <NavItem href="/">
                             <div>Home</div>
                         </NavItem>
-                        <NavItem href="/Login">
+                        <NavItem href="/Navigation/Login">
                             <div>Login</div>
                         </NavItem>
-                        <NavItem href="/Data">
+                        <NavItem href="/Navigation/Data">
                             <div>Data</div>
+                        </NavItem>
+                        <NavItem href="/Navigation/DataTable">
+                            <div>Table</div>
                         </NavItem>
                         You are logged in as: {user}
         </Navbar>
@@ -39,6 +43,7 @@ class NaviBar extends Component {
                     <Route path="/Login" component={Login} />
                     <Route path="/Logout" component={Logout} />
                     <Route path="/Data" component={Data} />
+                    <Route path="/DataTable" component={AppClient}/>
 
                 </div>
 

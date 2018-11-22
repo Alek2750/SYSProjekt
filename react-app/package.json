@@ -18,15 +18,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-<<<<<<< HEAD
-    "eject": "react-scripts eject",
-    "backend": "node data/makeData",
-    "postbackend": "json-server --watch data/db.json --port 1234"
-=======
     "backend": "node data/makeData",
     "postbackend": "json-server --watch data/db.json --port 1234",
     "eject": "react-scripts eject"
->>>>>>> 85935606759b64fa2823ca66cae0f972339a51ab
   },
   "eslintConfig": {
     "extends": "react-app"

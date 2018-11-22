@@ -8,6 +8,7 @@ import Jwt from './Jwt';
 import NB from './NaviBar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import * as serviceWorker from './serviceWorker';
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
 class Selector extends React.Component {
     state = { app: <App /> }
@@ -23,16 +24,28 @@ class Selector extends React.Component {
     }
     render() {
       return (
+      <Router>
       <div>
         <div onClick={this.select} >
-          <a href="#" id="a1"> Render All</a>
-          <a href="#" id="a2"> Paginate on Client</a>
-          <a href="#" id="a3"> AppClient med table </a>
-          <a href="#" id="a4"> Jwt side </a>
-          <a href="#" id="a5"> NaviBar side </a> 
+          <a href="/" id="a1"> Render All -</a>
+          <a href="/Client" id="a2"/>
+          <a href="/Table" id="a3"/>
+          <a href="/Jwt" id="a4"/>
+          <a href="/Navigation" id="a5"> NaviBar</a>    
+          
+          <Route exact path="/" component={App} />
+          <Route path="/Jwt" component={Jwt} />
+          <Route path="/Navigation" component={NB} />
+          <Route path="/Navigation/Login" component={Jwt}/>
+          <Route path="/Navigation/Data" component={AppMock}/>
+          <Route path="/Navigation/DataTAble" component={AppClient}/>
+
+         
         </div>
         {this.state.app}
       </div>
+      </Router>
+      
       )}
    }
 
