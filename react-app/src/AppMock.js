@@ -14,7 +14,7 @@ class AppMock extends Component {
     }
     
     componentDidUpdate(){
-      console.timeEnd("rendering");
+      //console.timeEnd("rendering");
     }
     
     render() {

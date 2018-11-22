@@ -36,6 +36,9 @@ class NaviBar extends Component {
                         <NavItem href="/Navigation/DataTable">
                             <div>Table</div>
                         </NavItem>
+                        <NavItem href="/Navigation/ResidenceList">
+                            <div>Residences</div>
+                        </NavItem>
                         You are logged in as: {user}
         </Navbar>
 

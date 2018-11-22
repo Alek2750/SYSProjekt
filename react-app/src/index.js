@@ -33,14 +33,16 @@ class Selector extends React.Component {
           <a href="/Client" id="a2"/>
           <a href="/Table" id="a3"/>
           <a href="/Jwt" id="a4"/>
-          <a href="/Navigation" id="a5"> NaviBar</a>    
+          <a href="/Navigation" id="a5"> NaviBar</a>
+          <a href="/ResidenceList" id="a6"/>    
           
           <Route exact path="/" component={App} />
           <Route path="/Jwt" component={Jwt} />
           <Route path="/Navigation" component={NB} />
           <Route path="/Navigation/Login" component={Jwt}/>
           <Route path="/Navigation/Data" component={AppMock}/>
-          <Route path="/Navigation/DataTAble" component={AppClient}/>
+          <Route path="/Navigation/DataTable" component={AppClient}/>
+          <Route path="/Navigation/ResidenceList" component={ResidenceList}/>
 
          
         </div>
