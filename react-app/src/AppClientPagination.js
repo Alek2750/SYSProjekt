@@ -6,16 +6,11 @@ import filterFactory, { textFilter } from 'react-bootstrap-table2-filter';
 import paginationFactory from 'react-bootstrap-table2-paginator';
 
 const columns = [{
-    dataField: 'id',
+    /*dataField: 'id',
     text: 'ID:',
     sort: true,
     filter: textFilter()
-  }, {
-    dataField: 'gender',
-    text: 'Gender:',
-    sort: true,
-    filter: textFilter()
-  }, {
+  }, {*/
     dataField: 'firstName',
     text: 'firstname:',
     sort: true,
@@ -23,6 +18,11 @@ const columns = [{
   }, {
     dataField: 'lastName',
     text: 'lastname:',
+    sort: true,
+    filter: textFilter()
+  }, {
+    dataField: 'gender',
+    text: 'gender:',
     sort: true,
     filter: textFilter()
   }, {

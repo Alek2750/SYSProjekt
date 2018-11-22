@@ -1,5 +1,8 @@
 package rest;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import entity.DataFacade;
 import javax.annotation.security.RolesAllowed;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.UriInfo;
@@ -22,6 +25,7 @@ public class DemoResource {
 
     @Context
     private UriInfo context;
+    Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
     @Context
     SecurityContext securityContext;
@@ -35,12 +39,11 @@ public class DemoResource {
         return "\"Hello from USER: " + user + "\"";
     }
 
-    @POST
+    @GET
     @Produces(MediaType.APPLICATION_JSON)
-    @RolesAllowed("admin")
-    public String registerUser() {
-        String user = securityContext.getUserPrincipal().getName();
-        return "\"Hello from ADMIN" + user + "\"";
+    @Path("/Housing")
+    public String getAllHousing() {
+        return gson.toJson(DataFacade.getInstance().getAllHousing());
     }
 
     @GET
