@@ -1,26 +1,28 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Navbar from './NaviBar'
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import AppClient from './AppClientPagination'
+import Jwt from './Jwt';
+import ResidenceList from './ResidenceList';
+import Home from './Home';
+import facade from "./apiFacade";
+
+const Logout = () => <div>{facade.logout()}You have now been logged out</div>;
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <Router>
+        <div>
+          <Navbar />
+          <Route exact path="/" component={Home} />
+          <Route path="/Jwt" component={Jwt} />
+          <Route path="/Navigation/Login" component={Jwt} />
+          <Route path="/Navigation/DataTable" component={AppClient} />
+          <Route path="/Navigation/ResidenceList" component={ResidenceList} />
+        </div>
+      </Router>
     );
   }
 }

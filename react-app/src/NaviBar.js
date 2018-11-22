@@ -1,10 +1,11 @@
 import React, { Component } from "react"
 import facade from "./apiFacade";
-import './App.css';
-import { Navbar, NavItem } from "react-bootstrap";
+import './CustomNavbar.css'
+import { Navbar, Nav, NavItem } from "react-bootstrap";
+import { Link } from 'react-router-dom';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Login from './Jwt.js';
-import {user} from './Jwt.js';
+import { user } from './Jwt.js';
 import AppClient from "./AppClientPagination";
 //Note: 'npm install react-bootstrap --save' kan forekomme nødvendigt
 //Note: 'npm install react-router-dom --save' kan forekomme nødvendigt 
@@ -20,37 +21,33 @@ const Data = () => <div className="Data"><h1>Data: Link til swapi eller noget he
 class NaviBar extends Component {
     render() {
         return (
-            <Router>
-
-                <div>
-                    <Navbar>
-                        <NavItem href="/">
-                            <div>Home</div>
-                        </NavItem>
-                        <NavItem href="/Navigation/Login">
-                            <div>Login</div>
-                        </NavItem>
-                        <NavItem href="/Navigation/Data">
-                            <div>Data</div>
-                        </NavItem>
-                        <NavItem href="/Navigation/DataTable">
-                            <div>Table</div>
-                        </NavItem>
-                        <NavItem href="/Navigation/ResidenceList">
-                            <div>Residences</div>
-                        </NavItem>
-                        You are logged in as: {user}
-        </Navbar>
-
-                    <Route exact path="/" component={Home} />
-                    <Route path="/Login" component={Login} />
-                    <Route path="/Logout" component={Logout} />
-                    <Route path="/Data" component={Data} />
-                    <Route path="/DataTable" component={AppClient}/>
-
-                </div>
-
-            </Router>
+            <Navbar default collapseOnSelect>
+                <Navbar.Header>
+                    <Navbar.Brand>
+                        <Link to="/">BoligRunner</Link>
+                    </Navbar.Brand>
+                    
+                </Navbar.Header>
+                
+                <Nav className='nav'>
+                    <NavItem eventKey={1} componentClass={Link} href="/" to="/">
+                        <b>Home</b>
+                    </NavItem>
+                    <NavItem eventKey={2} componentClass={Link} href="/Navigation/Login" to="/Navigation/Login">
+                        <b>Login</b>
+                    </NavItem>
+                    <NavItem eventKey={3} componentClass={Link} href="/Navigation/Data" to="/Navigation/Data">
+                        <b>Data</b>
+                    </NavItem>
+                    <NavItem eventKey={4} componentClass={Link} href="/Navigation/DataTable" to="/Navigation/DataTable">
+                        <b>Table</b>
+                    </NavItem>
+                    <NavItem eventKey={5} componentClass={Link} href="/Navigation/ResidenceList" to="/Navigation/ResidenceList">
+                        <b>Residences</b>
+                    </NavItem>
+                </Nav>
+                
+            </Navbar>
         );
     }
 }
