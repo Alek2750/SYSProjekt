@@ -25,6 +25,7 @@ class NaviBar extends Component {
                 <Navbar.Header>
                     <Navbar.Brand>
                         <Link to="/">BoligRunner</Link>
+                        <div>Logged in as: {user}</div>
                     </Navbar.Brand>
                     
                 </Navbar.Header>
