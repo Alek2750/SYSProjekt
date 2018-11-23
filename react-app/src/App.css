@@ -30,7 +30,7 @@ nav {
 
 div{
   color: black;
-  background-color: aquamarine;
+  background-color: rgb(204, 204, 224)
 }
 
 @keyframes App-logo-spin {

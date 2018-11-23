@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import AppMock from './AppMock'
 import AppClient from './AppClientPagination'
 import Jwt from './Jwt';
 import NB from './NaviBar';

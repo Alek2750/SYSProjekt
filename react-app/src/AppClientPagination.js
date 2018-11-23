@@ -34,19 +34,12 @@ const columns = [{
 
 class AppClient extends Component {
     state = { names: [], msg: "" }
-    async componentDidMount() {
-        console.time("fetching");
+    async componentDidMount() {       
         this.setState({ msg: "Loading..." });
         const names = await
-            fetch("http://localhost:1234/api").then(res => res.json());
-        console.timeEnd("fetching");
-        console.time("rendering");
+            fetch("http://localhost:1234/api").then(res => res.json());       
         this.setState({ names, msg: "" });
-    }
-
-    componentDidUpdate() {
-        //console.timeEnd("rendering");
-    }
+    }    
 
     render() {
         return <div>
