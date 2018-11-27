@@ -39,14 +39,15 @@ public class DataFacade {
             em.close();
         }
     }
-
-    public void DeleteHousing() {
+    
+    public Housing deleteHousing (int id) {
         EntityManager em = emf.createEntityManager();
-        List<Housing> h = new ArrayList();
         try {
             em.getTransaction().begin();
-            h = em.createNamedQuery("Housing.findAll").getResultList();
-            em.getTransaction().commit();            
+            Housing h = em.find(Housing.class, id);
+            em.remove(h);
+            em.getTransaction().commit();
+            return h;
         } finally {
             em.close();
         }
