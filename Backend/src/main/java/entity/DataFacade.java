@@ -39,8 +39,8 @@ public class DataFacade {
             em.close();
         }
     }
-    
-    public Housing deleteHousing (int id) {
+
+    public Housing deleteHousing(int id) {
         EntityManager em = emf.createEntityManager();
         try {
             em.getTransaction().begin();
@@ -53,16 +53,20 @@ public class DataFacade {
         }
     }
 
-    public List<Housing> EditHousing() {
+    public Housing editHousing(Housing h) {
         EntityManager em = emf.createEntityManager();
-        List<Housing> h = new ArrayList();
         try {
             em.getTransaction().begin();
-            h = em.createNamedQuery("Housing.findAll").getResultList();
-            em.getTransaction().commit();
-            return h;
+            Housing house = em.find(Housing.class, h.getId());
+            if (house != null) {
+                em.merge(h);
+                em.getTransaction().commit();
+                return house;
+            }
         } finally {
             em.close();
         }
+        return null;
     }
+
 }
