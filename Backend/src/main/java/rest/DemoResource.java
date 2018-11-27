@@ -52,7 +52,7 @@ public class DemoResource {
     }
 
     @PUT
-    @Path("/{id}")
+    @Path("/Housing/{id}")
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public Response putJson(String content, @PathParam("id") int id) {
@@ -63,7 +63,7 @@ public class DemoResource {
     }
 
     @DELETE
-    @Path("/{id}")
+    @Path("/Housing/{id}")
     @Produces(MediaType.APPLICATION_JSON)
     public Response deleteCustomer(@PathParam("id") int id) {
         Housing h = DataFacade.getInstance().deleteHousing(id);       
