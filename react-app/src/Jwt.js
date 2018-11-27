@@ -50,15 +50,14 @@ class LoggedIn extends Component {
     }
 }
 class Jwt extends Component {
-    user = () => {
-        return 'Not logged in';
-    }
+   
     constructor(props) {
         super(props);
         this.state = { loggedIn: false }
     }
     logout = () => {
         facade.logout();
+        user = 'Not logged in'
         this.setState({ loggedIn: false });
     } //TODO
     login = (user, pass) => {
