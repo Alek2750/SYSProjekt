@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>Boligrunner ::..</title>
+
+<!-- Bootstrap core CSS -->
+<link href="vendor/bootstrap/dist/css/bootstrap.min.css"
+	rel="stylesheet">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- Custom styles for this template -->
+<link href="css/main.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+	<!-- Navigation -->
+	<nav class="navbar navbar-expand-lg bg-white fixed-top">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#"><img src="images/logo2.png">
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse"
+				data-target="#navbarResponsive" aria-controls="navbarResponsive"
+				aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item"><a class="nav-link" href="index.html">Home
+							<span class="sr-only">(current)</span> </a></li>
+					<li class="nav-item"><a class="nav-link" href="#">Søg
+							bolig</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">Udlej
+							bolig</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">Lejekontrakter</a>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="#">Opret
+							bruger</a></li>
+					<li class="nav-item active"><a class="nav-link"
+						href="login.html">Log ind</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<section id="listings" class="align-middle">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3 complementary" role="complementary">
+					<form>
+						<div class="wrapper center-block">
+							<div class="panel-group" id="accordion" role="tablist"
+								aria-multiselectable="true">
+								<div class="panel panel-default">
+									<div class="panel-heading active" role="tab" id="headingOne">
+										<h4 class="panel-title">
+											<a role="button" data-toggle="collapse"
+												data-parent="#accordion" href="#collapseOne"
+												aria-expanded="true" aria-controls="collapseOne"> Area </a>
+										</h4>
+									</div>
+									<div id="collapseOne" class="panel-collapse active in"
+										role="tabpanel" aria-labelledby="headingOne">
+										<div class="panel-body">
+											<fieldset>
+												<input class="form-control" type="text"
+													placeholder="Indtast kvardtmeter" value="">
+											</fieldset>
+										</div>
+									</div>
+								</div>
+								<div class="panel panel-default">
+									<div class="panel-heading" role="tab" id="headingTwo">
+										<h4 class="panel-title">
+											<a class="collapsed" role="button" data-toggle="collapse"
+												data-parent="#accordion" href="#collapseTwo"
+												aria-expanded="false" aria-controls="collapseTwo">
+												Residence type </a>
+										</h4>
+									</div>
+									<div id="collapseTwo" class="panel-collapse collapse"
+										role="tabpanel" aria-labelledby="headingTwo">
+										<div class="panel-body">
+											<fieldset>
+
+												<div class="col-sm-12">
+													<div class="radio">
+														<label> <input type="radio" value=""
+															name="residence_type"> <span class="cr"><i
+																class="cr-icon glyphicon glyphicon-ok"></i> </span> Ejerlejlighed</label>
+													</div>
+													<div class="radio">
+														<label> <input type="radio" value=""
+															name="residence_type"> <span class="cr"><i
+																class="cr-icon glyphicon glyphicon-ok"></i> </span> Andelsbolig</label>
+													</div>
+													<div class="radio">
+														<label> <input type="radio" value=""
+															name="residence_type"> <span class="cr"><i
+																class="cr-icon glyphicon glyphicon-ok"></i> </span> Lejebolig</label>
+													</div>
+												</div>
+											</fieldset>
+										</div>
+									</div>
+								</div>
+								<div class="panel panel-default">
+									<div class="panel-heading" role="tab" id="headingThree">
+										<h4 class="panel-title">
+											<a class="collapsed" role="button" data-toggle="collapse"
+												data-parent="#accordion" href="#collapseThree"
+												aria-expanded="false" aria-controls="collapseThree">
+												Rent </a>
+										</h4>
+									</div>
+									<div id="collapseThree" class="panel-collapse collapse"
+										role="tabpanel" aria-labelledby="headingThree">
+										<div class="panel-body">
+											<label>From</label>
+											<fieldset>
+
+												<input class="form-control" type="text"
+													placeholder="Indtast husleje" value="">
+											</fieldset>
+											<label>To</label>
+											<fieldset>
+
+												<input class="form-control" type="text"
+													placeholder="Indtast husleje" value="">
+											</fieldset>
+										</div>
+									</div>
+								</div>
+								<div class="panel panel-default">
+									<div class="panel-heading" role="tab" id="headingFour">
+										<h4 class="panel-title">
+											<a class="collapsed" role="button" data-toggle="collapse"
+												data-parent="#accordion" href="#collapseFour"
+												aria-expanded="false" aria-controls="collapseFour"> Size
+											</a>
+										</h4>
+									</div>
+									<div id="collapseFour" class="panel-collapse collapse"
+										role="tabpanel" aria-labelledby="headingFour">
+										<div class="panel-body">
+											<label>From</label>
+											<fieldset>
+
+												<input class="form-control" type="text"
+													placeholder="Indtast husleje" value="">
+											</fieldset>
+											<label>To</label>
+											<fieldset>
+
+												<input class="form-control" type="text"
+													placeholder="Indtast husleje" value="">
+											</fieldset>
+										</div>
+									</div>
+								</div>
+
+								<div class="panel panel-default">
+									<div class="panel-heading" role="tab" id="headingFive">
+										<h4 class="panel-title">
+											<a class="collapsed" role="button" data-toggle="collapse"
+												data-parent="#accordion" href="#collapseFive"
+												aria-expanded="false" aria-controls="collapseFive">
+												Rooms </a>
+										</h4>
+									</div>
+									<div id="collapseFive" class="panel-collapse collapse"
+										role="tabpanel" aria-labelledby="headingFive">
+										<div class="panel-body">
+											<div class="col-sm-12">
+												<div class="radio">
+													<label> <input type="radio" value="" name="rooms">
+														<span class="cr"><i
+															class="cr-icon glyphicon glyphicon-ok"></i> </span> Option one</label>
+												</div>
+												<div class="radio">
+													<label> <input type="radio" value="" name="rooms">
+														<span class="cr"><i
+															class="cr-icon glyphicon glyphicon-ok"></i> </span> Option two</label>
+												</div>
+												<div class="radio">
+													<label> <input type="radio" value="" name="rooms">
+														<span class="cr"><i
+															class="cr-icon glyphicon glyphicon-ok"></i> </span> Option three</label>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="panel panel-default">
+									<div class="panel-heading" role="tab" id="headingSix">
+										<h4 class="panel-title">
+											<a class="collapsed" role="button" data-toggle="collapse"
+												data-parent="#accordion" href="#collapseSix"
+												aria-expanded="false" aria-controls="collapseSix"> Rent
+												Period </a>
+										</h4>
+									</div>
+									<div id="collapseSix" class="panel-collapse collapse"
+										role="tabpanel" aria-labelledby="headingSix">
+										<div class="panel-body">
+											<div class="col-sm-12">
+												<div class="radio">
+													<label> <input type="radio" value=""
+														name="rentperiod"> <span class="cr"><i
+															class="cr-icon glyphicon glyphicon-ok"></i> </span> 1 år</label>
+												</div>
+												<div class="radio">
+													<label> <input type="radio" value=""
+														name="rentperiod"> <span class="cr"><i
+															class="cr-icon glyphicon glyphicon-ok"></i> </span> 2+ år</label>
+												</div>
+												<div class="radio">
+													<label> <input type="radio" value=""
+														name="rentperiod"> <span class="cr"><i
+															class="cr-icon glyphicon glyphicon-ok"></i> </span> Ubegrænset</label>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="panel panel-default">
+									<div class="panel-heading" role="tab" id="headingSeven">
+										<h4 class="panel-title">
+											<a class="collapsed" role="button" data-toggle="collapse"
+												data-parent="#accordion" href="#collapseSeven"
+												aria-expanded="false" aria-controls="collapseSeven">
+												Other </a>
+										</h4>
+									</div>
+									<div id="collapseSeven" class="panel-collapse collapse"
+										role="tabpanel" aria-labelledby="headingSeven">
+										<div class="panel-body">
+											<div class="col-sm-12">
+												<div class="radio">
+													<label> <input type="radio" value=""
+														name="rentperiod"> <span class="cr"><i
+															class="cr-icon glyphicon glyphicon-ok"></i> </span> Option one</label>
+												</div>
+												<div class="radio">
+													<label> <input type="radio" value=""
+														name="rentperiod"> <span class="cr"><i
+															class="cr-icon glyphicon glyphicon-ok"></i> </span> Option two</label>
+												</div>
+												<div class="radio">
+													<label> <input type="radio" value=""
+														name="rentperiod"> <span class="cr"><i
+															class="cr-icon glyphicon glyphicon-ok"></i> </span> Option three</label>
+												</div>
+												<div class="radio">
+													<label> <input type="radio" value=""
+														name="rentperiod"> <span class="cr"><i
+															class="cr-icon glyphicon glyphicon-ok"></i> </span> Option four</label>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+
+							</div>
+						</div>
+
+						<fieldset>
+							<button id="search" class="btn btn-primary" name="search">
+								<i class="fa fa-search"></i>Find
+							</button>
+						</fieldset>
+
+					</form>
+
+				</div>
+				<div class="col-md-9" role="main">
+					<div class="row listing-selection">
+
+						<div class="col-sm-6 filter-header results-count">6 boliger
+							fundet.1 valgt by eller område.</div>
+
+						<div class="col-sm-2 filter-header">
+							<div class="dropdown">
+								<button class="btn btn-secondary dropdown-toggle" type="button"
+									id="dropdownMenuButton" data-toggle="dropdown"
+									aria-haspopup="true" aria-expanded="false">Sortering:Normal</button>
+								<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+									<a class="dropdown-item" href="#">Lowest Price First</a> <a
+										class="dropdown-item" href="#">Highest Price First</a> <a
+										class="dropdown-item" href="#">Largest Space First</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-4 filter-header">
+							<nav aria-label="Page navigation example">
+								<ul class="pagination justify-content-end">
+									<li class="page-item disabled"><a class="page-link"
+										href="#" tabindex="-1">Previous</a>
+									</li>
+									<li class="page-item"><a class="page-link" href="#">1</a>
+									</li>
+									<li class="page-item"><a class="page-link" href="#">2</a>
+									</li>
+									<li class="page-item"><a class="page-link" href="#">3</a>
+									</li>
+									<li class="page-item"><a class="page-link" href="#">Next</a>
+									</li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+					<hr>
+					<div class="row listing-details">
+						<div class="col-sm-6">
+							<a href="details.html">
+								<div class="card">
+									<img class="card-img-top" src="images/w484h327.jpg"
+										alt="Card image cap">
+									<div class="Card__price">15.000,-</div>
+									<div class="card-body">
+										<h5 class="card-title truncate">7 SAL, ALTAN SUPER
+											DELEVENLIG BOLIG, SKØN ALTAn, ØRESTAD</h5>
+										<p class="card-text truncate">3 værelser · 66 m² · Robert
+											Jacobsens Vej, København S</p>
+										<img src="images/33409.svg">
+									</div>
+								</div> </a>
+						</div>
+
+						<div class="col-sm-6">
+							<a href="details.html">
+								<div class="card">
+									<img class="card-img-top" src="images/w484h327.jpg"
+										alt="Card image cap">
+									<div class="Card__price">15.000,-</div>
+									<div class="card-body">
+										<h5 class="card-title truncate">7 SAL, ALTAN SUPER
+											DELEVENLIG BOLIG, SKØN ALTAn, ØRESTAD</h5>
+										<p class="card-text truncate">3 værelser · 66 m² · Robert
+											Jacobsens Vej, København S</p>
+										<img src="images/33409.svg">
+									</div>
+								</div> </a>
+						</div>
+
+						<div class="col-sm-6">
+							<a href="details.html">
+								<div class="card">
+									<img class="card-img-top" src="images/w484h327.jpg"
+										alt="Card image cap">
+									<div class="Card__price">15.000,-</div>
+									<div class="card-body">
+										<h5 class="card-title truncate">7 SAL, ALTAN SUPER
+											DELEVENLIG BOLIG, SKØN ALTAn, ØRESTAD</h5>
+										<p class="card-text truncate">3 værelser · 66 m² · Robert
+											Jacobsens Vej, København S</p>
+										<img src="images/33409.svg">
+									</div>
+								</div> </a>
+						</div>
+
+						<div class="col-sm-6">
+							<a href="details.html">
+								<div class="card">
+									<img class="card-img-top" src="images/w484h327.jpg"
+										alt="Card image cap">
+									<div class="Card__price">15.000,-</div>
+									<div class="card-body">
+										<h5 class="card-title truncate">7 SAL, ALTAN SUPER
+											DELEVENLIG BOLIG, SKØN ALTAn, ØRESTAD</h5>
+										<p class="card-text truncate">3 værelser · 66 m² · Robert
+											Jacobsens Vej, København S</p>
+										<img src="images/33409.svg">
+									</div>
+								</div> </a>
+						</div>
+
+						<div class="col-sm-6">
+							<a href="details.html">
+								<div class="card">
+									<img class="card-img-top" src="images/w484h327.jpg"
+										alt="Card image cap">
+									<div class="Card__price">15.000,-</div>
+									<div class="card-body">
+										<h5 class="card-title truncate">7 SAL, ALTAN SUPER
+											DELEVENLIG BOLIG, SKØN ALTAn, ØRESTAD</h5>
+										<p class="card-text truncate">3 værelser · 66 m² · Robert
+											Jacobsens Vej, København S</p>
+										<img src="images/33409.svg">
+									</div>
+								</div> </a>
+						</div>
+
+						<div class="col-sm-6">
+							<a href="details.html">
+								<div class="card">
+									<img class="card-img-top" src="images/w484h327.jpg"
+										alt="Card image cap">
+									<div class="Card__price">15.000,-</div>
+									<div class="card-body">
+										<h5 class="card-title truncate">7 SAL, ALTAN SUPER
+											DELEVENLIG BOLIG, SKØN ALTAn, ØRESTAD</h5>
+										<p class="card-text truncate">3 værelser · 66 m² · Robert
+											Jacobsens Vej, København S</p>
+										<img src="images/33409.svg">
+									</div>
+								</div> </a>
+						</div>
+
+					</div>
+					<nav aria-label="Page navigation example">
+						<ul class="pagination justify-content-end">
+							<li class="page-item disabled"><a class="page-link" href="#"
+								tabindex="-1">Previous</a></li>
+							<li class="page-item"><a class="page-link" href="#">1</a>
+							</li>
+							<li class="page-item"><a class="page-link" href="#">2</a>
+							</li>
+							<li class="page-item"><a class="page-link" href="#">3</a>
+							</li>
+							<li class="page-item"><a class="page-link" href="#">Next</a>
+							</li>
+						</ul>
+					</nav>
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<!-- /.container -->
+	<!-- Footer -->
+	<footer class="py-5 bg-dark">
+		<div class="container">
+			<p class="m-0 text-center text-white">Copyright &copy;
+				Boligrunner 2018</p>
+		</div>
+		<!-- /.container -->
+	</footer>
+
+	<!-- Bootstrap core JavaScript -->
+	<script src="vendor/jquery/jquery.min.js"></script>
+	<script src="vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+	<script>
+		$('#nav').affix({
+			offset : {
+				top : $('#nav').offset().top
+			}
+		});
+
+		$('.panel-collapse').on('show.bs.collapse', function() {
+			$(this).siblings('.panel-heading').addClass('active');
+		});
+
+		$('.panel-collapse').on('hide.bs.collapse', function() {
+			$(this).siblings('.panel-heading').removeClass('active');
+		});
+	</script>
+
+</body>
+
+</html>
