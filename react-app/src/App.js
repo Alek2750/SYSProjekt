@@ -6,9 +6,9 @@ import AppClient from './AppClientPagination'
 import Jwt from './Jwt';
 import ResidenceList from './ResidenceList';
 import Home from './Home';
-import facade from "./apiFacade";
+//import facade from "./apiFacade";
 
-const Logout = () => <div>{facade.logout()}You have now been logged out</div>;
+//const Logout = () => <div>{facade.logout()}You have now been logged out</div>;
 
 class App extends Component {
   render() {
@@ -17,10 +17,9 @@ class App extends Component {
         <div>
           <Navbar />
           <Route exact path="/" component={Home} />
-          <Route path="/Jwt" component={Jwt} />
-          <Route path="/Navigation/Login" component={Jwt} />
-          <Route path="/Navigation/DataTable" component={AppClient} />
-          <Route path="/Navigation/ResidenceList" component={ResidenceList} />
+          <Route path="/Login" component={Jwt} />
+          <Route path="/DataTable" component={AppClient} />
+          <Route path="/ResidenceList" component={ResidenceList} />
         </div>
       </Router>
     );

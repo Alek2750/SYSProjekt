@@ -1,11 +1,15 @@
 import React, { Component } from "react"
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import BootstrapTable from 'react-bootstrap-table-next';
+import cellEditFactory from 'react-bootstrap-table2-editor';
 import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
 import filterFactory, { textFilter } from 'react-bootstrap-table2-filter';
 import paginationFactory from 'react-bootstrap-table2-paginator';
+import cellEditFactory from 'react-bootstrap-table2-editor';
+//import { Type } from 'react-bootstrap-table2-editor';
 
-const URL = ""; //Indsæt URL for API
+
+const URL = "http://localhost:8084/jwtbackend/api/info/Housing"; //Indsæt URL for API
 
 const labels = [{
     dataField: 'address',
@@ -27,7 +31,7 @@ const labels = [{
     text: 'Værelser',
     sort: true,
     filter: textFilter()
-}, {
+},/* {
     dataField: 'funiture',
     text: 'Møbleret',
     sort: true,
@@ -37,7 +41,7 @@ const labels = [{
     text: 'Husdyr tilladt',
     sort: true,
     filter: textFilter()
-}, {
+},*/ {
     dataField: 'size',
     text: 'Størrelse',
     sort: true,
@@ -47,7 +51,7 @@ const labels = [{
     text: 'Etage',
     sort: true,
     filter: textFilter()
-}, {
+},/* {
     dataField: 'shareable',
     text: 'Delevenlig',
     sort: true,
@@ -62,12 +66,13 @@ const labels = [{
     text: 'Lejeperiode',
     sort: true,
     filter: textFilter()
-}, {
+},*/ {
     dataField: 'rent',
     text: 'Månedlig leje',
     sort: true,
     filter: textFilter()
-}, {
+},
+ /*{
     dataField: 'deposit',
     text: 'Depositum',
     sort: true,
@@ -87,25 +92,22 @@ const labels = [{
     text: 'Oprettelsesdato',
     sort: true,
     filter: textFilter()
-},];
+},*/];
 
 class ResidenceList extends Component {
     state = { residence: [], msg: "" }
     async componentDidMount() {
-        console.time("fetching");
+
         this.setState({ msg: "Loading..." });
         const residence = await
-            fetch("URL").then(res => res.json());
-        console.timeEnd("fetching");
-        console.time("rendering");
+            fetch(URL).then(res => res.json());
+
         this.setState({ residence, msg: "" });
     }
-
-    componentDidUpdate() {
-        console.timeEnd("rendering");
-    }
-
     render() {
+        const cellEdit = cellEditFactory({
+            mode: 'click',
+        });
         return <div>
             <h4>Boliger</h4>
             <BootstrapTable
@@ -117,6 +119,7 @@ class ResidenceList extends Component {
                 columns={labels}
                 filter={filterFactory()}
                 pagination={paginationFactory()}
+                cellEdit={cellEditFactory({mode: 'dbclick'})}
             />
         </div>
     }

@@ -39,4 +39,34 @@ public class DataFacade {
             em.close();
         }
     }
+
+    public Housing deleteHousing(int id) {
+        EntityManager em = emf.createEntityManager();
+        try {
+            em.getTransaction().begin();
+            Housing h = em.find(Housing.class, id);
+            em.remove(h);
+            em.getTransaction().commit();
+            return h;
+        } finally {
+            em.close();
+        }
+    }
+
+    public Housing editHousing(Housing h) {
+        EntityManager em = emf.createEntityManager();
+        try {
+            em.getTransaction().begin();
+            Housing house = em.find(Housing.class, h.getId());
+            if (house != null) {
+                em.merge(h);
+                em.getTransaction().commit();
+                return house;
+            }
+        } finally {
+            em.close();
+        }
+        return null;
+    }
+
 }
