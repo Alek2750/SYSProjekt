@@ -1,88 +1,87 @@
-import React from 'react';
-import { StyleSheet, Text, View, Button, Alert, FlatList, ActivityIndicator, TouchableHighlight } from 'react-native';
+import React, { Component } from 'react';
+import {
+  Platform,
+  StyleSheet,
+  Text,
+  View,
+  AsyncStorage
+} from 'react-native';
 
-export default class App extends React.Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.Headline}> Welcome page </Text>
-        <ButtonFetch />
+import Tabs from './src'
+const key = 'cities'
 
-      </View>
-    );
-  }
-}
-
-class ButtonFetch extends React.Component {
-
+export default class App extends Component {
   constructor(props) {
-    super(props);
-    this.state = { isLoading: true }
+    super(props)
+    this.state = { cities: [] }
   }
-
-  componentDidMount = async () => {
-    await fetch('https://facebook.github.io/react-native/movies.json')
-      .then((response) => response.json())
-      .then((responseJson) => {
-
+  async componentDidMount() {
+    try {
+      const cities = await AsyncStorage.getItem(key)
+      console.log("class", cities.constructor.type);
+      if (cities !== null) {
         this.setState({
-          isLoading: false,
-          dataSource: responseJson.movies,
-        }, function () {
+          cities: JSON.parse(cities)
+        })
+      }
+    } catch (e) {
+      console.log('e: ', e)
+    }
+  }
 
-        });
-
+  addCity = (city) => {
+    const cities = this.state.cities
+    console.log("cities", cities.constructor.name)
+    cities.push(city)
+    AsyncStorage.setItem(key, JSON.stringify(cities))
+      .then(() => console.log('item stored'))
+      .catch(err => {
+        console.log('error: ', err)
       })
-      .catch((error) => {
-        console.error(error);
-      });
+    this.setState({ cities })
   }
 
-  buttonclick(item) {
-    Alert.alert(item.title, item.releaseYear)
+  addLocation = (location, city) => {
+    const index = this.state.cities.findIndex(item => {
+      return item.id === city.id
+    })
+    const chosenCity = this.state.cities[index]
+    chosenCity.locations.push(location)
+    const cities = [
+      ...this.state.cities.slice(0, index),
+      chosenCity,
+      ...this.state.cities.slice(index + 1)
+    ]
+    this.setState({
+      cities
+    }, () => {
+      AsyncStorage.setItem(key, JSON.stringify(cities))
+        .then(() => console.log('item stored'))
+        .catch(err => {
+          console.log('error: ', err)
+        })
+    })
   }
-
+  clearDB = () => {
+    try {
+      AsyncStorage.clear()
+      this.setState({ cities: [] })
+    } catch (e) {
+      console.log('e: ', e)
+    }
+  }
 
   render() {
-
-    if (this.state.isLoading) {
-      return (
-        <View style={styles.container}>
-          <ActivityIndicator />
-        </View>
-      )
-    }
-
     return (
-
-      <FlatList
-        data={this.state.dataSource}
-        renderItem={({ item }) => (
-          <View style={{ flex: 1, paddingTop: 50 }}>
-            <Text>{item.title}, {item.releaseYear}</Text>
-            <Button
-              onPress={() => this.buttonclick(item)} title="Press here" />
-          </View>
-        )}
-        keyExtractor={item => item.id}
+      <Tabs
+        screenProps={{
+          cities: this.state.cities,
+          addCity: this.addCity,
+          addLocation: this.addLocation,
+          clearDB: this.clearDB
+        }}
       />
-
     )
   }
 }
 
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-    paddingTop: 50,
-  },
-  Headline: {
-    color: 'blue',
-    fontWeight: "400",
-    fontSize: 30
-  },
-});
