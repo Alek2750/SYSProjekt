@@ -6,9 +6,9 @@ import AppClient from './AppClientPagination'
 import Jwt from './Jwt';
 import ResidenceList from './ResidenceList';
 import Home from './Home';
-import facade from "./apiFacade";
+//import facade from "./apiFacade";
 
-const Logout = () => <div>{facade.logout()}You have now been logged out</div>;
+//const Logout = () => <div>{facade.logout()}You have now been logged out</div>;
 
 class App extends Component {
   render() {

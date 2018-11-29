@@ -17,9 +17,6 @@ const columns = [{
     text: 'fornavn',
     sort: true,
     filter: textFilter(),
-    editor: {
-      type: Type.TEXTAREA
-    }
   }, {
     dataField: 'lastName',
     text: 'efternavn',
