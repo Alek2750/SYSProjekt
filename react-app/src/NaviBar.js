@@ -6,7 +6,6 @@ import { user } from './Jwt.js';
 
 //Note: 'npm install react-bootstrap --save' kan forekomme nødvendigt
 //Note: 'npm install react-router-dom --save' kan forekomme nødvendigt 
-//Indsæt kode
 
 class NaviBar extends Component {
     render() {
