@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
-import foto2 from './estate.png'
+import testcity from './images/testcity.jpg'
 import { Jumbotron, Grid, Image, Button } from 'react-bootstrap';
 import './main.css';
 //import './Home.css';
@@ -64,35 +64,35 @@ export default class Home extends Component {
                         <div class="col-lg-custom portfolio-item">
                             <div class="card h-100">
                                 <span class="Frontpage__cities-item__name">København</span> <a
-                                    href="#"><img class="card-img-top" src="images/testcity.jpg"
+                                    href="#"><img class="card-img-top" src={testcity}
                                         alt="" /> </a>
                             </div>
                         </div>
                         <div class="col-lg-custom portfolio-item">
                             <span class="Frontpage__cities-item__name">Odense</span>
                             <div class="card h-100">
-                                <a href="#"><img class="card-img-top" src="images/testcity.jpg"
+                                <a href="#"><img class="card-img-top" src={testcity}
                                     alt="" /> </a>
                             </div>
                         </div>
                         <div class="col-lg-custom portfolio-item">
                             <span class="Frontpage__cities-item__name">Fyn</span>
                             <div class="card h-100">
-                                <a href="#"><img class="card-img-top" src="images/testcity.jpg"
+                                <a href="#"><img class="card-img-top" src={testcity}
                                     alt="" /> </a>
                             </div>
                         </div>
                         <div class="col-lg-custom portfolio-item">
                             <span class="Frontpage__cities-item__name">En anden by</span>
                             <div class="card h-100">
-                                <a href="#"><img class="card-img-top" src="images/testcity.jpg"
+                                <a href="#"><img class="card-img-top" src={testcity}
                                     alt="" /> </a>
                             </div>
                         </div>
                         <div class="col-lg-custom portfolio-item">
                             <span class="Frontpage__cities-item__name">En tredje by</span>
                             <div class="card h-100">
-                                <a href="#"><img class="card-img-top" src="images/testcity.jpg"
+                                <a href="#"><img class="card-img-top" src={testcity}
                                     alt="" /> </a>
                             </div>
                         </div>
