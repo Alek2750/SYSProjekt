@@ -41,18 +41,58 @@ class Login extends Component {
                         </div>
                     </div>
                 </section>
-
-
-
-
-
                 <script src="vendor/jquery/jquery.min.js"></script>
                 <script src="vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-
-
+            </div>
+        )
+    }
+    
+}
+class LoggedIn extends Component {
+    constructor(props) {
+        super(props);
+        this.state = { dataFromServer: "Fetching!!" };
+    }
+    componentDidMount() { facade.fetchData().then(res => this.setState({ dataFromServer: res })); }
+    render() {
+        return (
+            <div>
+                <h2>Data Received from server</h2>
+                <h3>{this.state.dataFromServer}</h3>
+            </div>
+        )
+    }
+}
+class Jwt extends Component {
+   
+    constructor(props) {
+        super(props);
+        this.state = { loggedIn: false }
+    }
+    logout = () => {
+        facade.logout();
+        user = 'Not logged in'
+        this.setState({ loggedIn: false });
+    } //TODO
+    login = (user, pass) => {
+        facade.login(user, pass)
+            .then(res => this.setState({ loggedIn: true }));
+    } //TODO
+    register = (user, pass) => {
+        facade.register(user, pass)
+            .then(res => this.setState({ loggedIn: true }));
+    }
+    render() {
+        return (
+            <div>
+                {!this.state.loggedIn ? (<Login login={this.login} />) :
+                    (<div>
+                        <LoggedIn />
+                        <button onClick={this.logout}>Logout</button>
+                    </div>)}
             </div>
         )
     }
 }
 
-export default Login;
+export default Jwt;

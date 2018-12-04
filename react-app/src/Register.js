@@ -40,11 +40,20 @@ class Register extends Component {
 				</section>
 				<script src="vendor/jquery/jquery.min.js"></script>
 				<script src="vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-
-
 			</div>
 		);
 	}
 }
-
+class Jwt extends Component {
+   
+    constructor(props) {
+        super(props);
+        this.state = { loggedIn: false }
+    }
+    
+    register = (user, pass) => {
+        facade.register(user, pass)
+            .then(res => this.setState({ loggedIn: true }));
+	}
+}
 export default Register;
