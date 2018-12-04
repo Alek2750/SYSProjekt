@@ -18,7 +18,7 @@ class Login extends Component {
                             </form>
 
                             <div class="login-help">
-                                <a href="#">Intent Login? </a> - <a href="register.html">Opret en gratis bruger</a>
+                                <a href="#">Intent Login? </a> - <a href="register">Opret en gratis bruger</a>
                             </div>
                         </div>
                     </div>
@@ -26,15 +26,6 @@ class Login extends Component {
 
 
 
-
-
-                <footer class="py-5 bg-dark">
-                    <div class="container">
-                        <p class="m-0 text-center text-white">Copyright &copy;
-				Boligrunner 2018</p>
-                    </div>
-
-                </footer>
 
 
                 <script src="vendor/jquery/jquery.min.js"></script>

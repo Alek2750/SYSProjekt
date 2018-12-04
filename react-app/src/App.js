@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import './App.css';
+//import './App.css';
+import './main.css';
 import Navbar from './NaviBar'
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import AppClient from './AppClientPagination'
@@ -10,6 +11,7 @@ import Login from './Login';
 import Register from './Register';
 import Find from './Find';
 import Details from './Details';
+import Footer from './Footer';
 //import facade from "./apiFacade";
 
 //const Logout = () => <div>{facade.logout()}You have now been logged out</div>;
@@ -27,6 +29,7 @@ class App extends Component {
           <Route path="/Register" component={Register} />
           <Route path="/Find" component={Find} />
           <Route path="/Details" component={Details} />
+          <Footer />
         </div>
       </Router>
     );

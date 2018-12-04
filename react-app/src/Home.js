@@ -13,7 +13,7 @@ export default class Home extends Component {
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-12">
-                                <h1 class="Frontpage__top-header">Find din næste lejebolig</h1>
+                                <h1 class="Frontpage__top-header">Find din næste lejlighed</h1>
                             </div>
                             <div class="col-lg-2"></div>
                             <div class="col-lg-8 center">
@@ -36,7 +36,7 @@ export default class Home extends Component {
                         <div class="row">
                             <div class="col-lg-4 col-sm-6 portfolio-item">
                                 <h4 class="card-title">
-                                    <a href="#">9.008 nye lejeboliger</a>
+                                    <a href="#">9.008 nye lejligheder</a>
                                 </h4>
                                 <p class="card-text">oprettet de sidste 30 dage</p>
                             </div>
@@ -50,7 +50,7 @@ export default class Home extends Component {
                                 <h4 class="card-title">
                                     <a href="#">Kundeservice</a>
                                 </h4>
-                                <p class="card-text">6-24 hver dag – Hele året</p>
+                                <p class="card-text">8-22 hver dag – Hele året</p>
                             </div>
                         </div>
                     </div>
@@ -104,15 +104,8 @@ export default class Home extends Component {
 
 
 
-                <footer class="py-5 bg-dark">
-                    <div class="container">
-                        <p class="m-0 text-center text-white">Copyright &copy; Boligrunner 2018</p>
-                    </div>
-
-                </footer>
-            
-            <script src="vendor/jquery/jquery.min.js"></script>
-            <script src="vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+                <script src="vendor/jquery/jquery.min.js"></script>
+                <script src="vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
             </div>
         )
     }
