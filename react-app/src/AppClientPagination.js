@@ -6,6 +6,9 @@ import filterFactory, { textFilter } from 'react-bootstrap-table2-filter';
 import paginationFactory from 'react-bootstrap-table2-paginator';
 import cellEditFactory from 'react-bootstrap-table2-editor';
 import { Type } from 'react-bootstrap-table2-editor';
+import facade from "./apiFacade";
+
+const URL2 = "http://localhost:8084/jwtbackend/api/info/"; //Indsæt URL for API
 
 const columns = [{
     /*dataField: 'id',
@@ -68,7 +71,12 @@ class AppClient extends Component {
                 keyField='id'
                 data={this.state.names}
                 columns={columns}
-                cellEdit={cellEditFactory({mode: 'dbclick'})}
+                cellEdit={cellEditFactory({
+                  mode: 'dbclick', afterSaveCell: (o, n, r) => {
+                      const options = facade.makeOptions("PUT", true, r );
+                      fetch(URL2 + r.id, options, console.log(r));                  
+                  }
+              })}
                 filter={ filterFactory() }
                 pagination={ paginationFactory() }
             />
