@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 import testcity from './images/testcity.jpg'
-import { Jumbotron, Grid, Image, Button } from 'react-bootstrap';
+//import { Jumbotron, Grid, Image, Button } from 'react-bootstrap';
 import './main.css';
 //import './Home.css';
 
@@ -48,7 +48,7 @@ export default class Home extends Component {
                             </div>
                             <div class="col-lg-4 col-sm-6 portfolio-item">
                                 <h4 class="card-title">
-                                    <a href="#">Kundeservice</a>
+                                    <a href="CustomerService">Kundeservice</a>
                                 </h4>
                                 <p class="card-text">8-22 hver dag – Hele året</p>
                             </div>
