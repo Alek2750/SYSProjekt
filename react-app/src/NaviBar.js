@@ -2,9 +2,9 @@ import React, { Component } from "react";
 //import './CustomNavbar.css'
 import './main.css';
 import logo2 from './images/logo2.png'
-import { Navbar, Nav, NavItem } from "react-bootstrap";
-import { Link } from 'react-router-dom';
-import { user } from './Jwt.js';
+//import { Navbar, Nav, NavItem } from "react-bootstrap";
+//import { Link } from 'react-router-dom';
+//import { user } from './Jwt.js';
 
 //Note: 'npm install react-bootstrap --save' kan forekomme nødvendigt
 //Note: 'npm install react-router-dom --save' kan forekomme nødvendigt 

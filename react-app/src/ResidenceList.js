@@ -74,12 +74,12 @@ const labels = [{
     sort: true,
     filter: textFilter()
 },
- /*{
+ {
     dataField: 'deposit',
     text: 'Depositum',
     sort: true,
     filter: textFilter()
-}, {
+ }/*, {
     dataField: 'aconto',
     text: 'Aconto',
     sort: true,
