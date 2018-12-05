@@ -6,32 +6,38 @@ import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
 import filterFactory, { textFilter } from 'react-bootstrap-table2-filter';
 import paginationFactory from 'react-bootstrap-table2-paginator';
 import cellEditFactory from 'react-bootstrap-table2-editor';
-import afterSaveCell from 'react-bootstrap-table2-editor';
 import facade from "./apiFacade";
+import { Jumbotron, Grid, Image, Button } from 'react-bootstrap';
 
 const URL = "http://localhost:8084/jwtbackend/api/info/Housing/"; //Indsæt URL for API
 const URL2 = "http://localhost:8084/jwtbackend/api/info/"; //Indsæt URL for API
-
+const addButtonLancamento = (cell, row) => {
+  return (
+    <div>
+      <Button type="button" className="btn btn-info" onClick={console.log("TEST")}>Detaljer</Button>
+    </div>
+  )
+}
 const labels = [{
-    dataField: 'address',
-    text: 'Adresse',
-    sort: true,
-    filter: textFilter()
+  dataField: 'address',
+  text: 'Adresse',
+  sort: true,
+  filter: textFilter()
 }, {
-    dataField: 'city',
-    text: 'Postnummer',
-    sort: true,
-    filter: textFilter()
+  dataField: 'city',
+  text: 'Postnummer',
+  sort: true,
+  filter: textFilter()
 }, {
-    dataField: 'proptype',
-    text: 'Boligtype',
-    sort: true,
-    filter: textFilter()
+  dataField: 'proptype',
+  text: 'Boligtype',
+  sort: true,
+  filter: textFilter()
 }, {
-    dataField: 'rooms',
-    text: 'Værelser',
-    sort: true,
-    filter: textFilter()
+  dataField: 'rooms',
+  text: 'Værelser',
+  sort: true,
+  filter: textFilter()
 },/* {
     dataField: 'funiture',
     text: 'Møbleret',
@@ -43,15 +49,15 @@ const labels = [{
     sort: true,
     filter: textFilter()
 },*/ {
-    dataField: 'size',
-    text: 'Størrelse',
-    sort: true,
-    filter: textFilter()
+  dataField: 'size',
+  text: 'Størrelse',
+  sort: true,
+  filter: textFilter()
 }, {
-    dataField: 'floor',
-    text: 'Etage',
-    sort: true,
-    filter: textFilter()
+  dataField: 'floor',
+  text: 'Etage',
+  sort: true,
+  filter: textFilter()
 },/* {
     dataField: 'shareable',
     text: 'Delevenlig',
@@ -68,34 +74,32 @@ const labels = [{
     sort: true,
     filter: textFilter()
 },*/ {
-    dataField: 'rent',
-    text: 'Leje',
-    sort: true,
-    filter: textFilter()
+  dataField: 'rent',
+  text: 'Leje',
+  sort: true,
+  filter: textFilter()
 },
- {
-    dataField: 'deposit',
-    text: 'Depositum',
-    sort: true,
-    filter: textFilter()
- },
- {
-    dataField: 'openhouse',
-    text: 'Åbent hus',
-    sort: true,
-    filter: textFilter()
- },
- {
-    dataField: 'sold',
-    text: 'Solgt',
-    sort: true,
-    filter: textFilter()
- }/*, {
-    dataField: 'aconto',
-    text: 'Aconto',
-    sort: true,
-    filter: textFilter()
+{
+  dataField: 'deposit',
+  text: 'Depositum',
+  sort: true,
+  filter: textFilter()
+},
+{
+  dataField: 'openhouse',
+  text: 'Åbent hus',
+  sort: true,
+  filter: textFilter()
+},
+{
+  dataField: 'sold',
+  text: 'Solgt',
+  sort: true,
+  filter: textFilter()
 }, {
+  formatter: addButtonLancamento,
+  editable: false
+}/*, {
     dataField: 'startperiod',
     text: 'Overtagelsesdato',
     sort: true,
@@ -109,33 +113,34 @@ const labels = [{
 
 class Find extends Component {
   state = { residence: [], msg: "" }
-    async componentDidMount() {
+  async componentDidMount() {
 
-        this.setState({ msg: "Loading..." });
-        const residence = await
-            fetch(URL).then(res => res.json());
+    this.setState({ msg: "Loading..." });
+    const residence = await
+      fetch(URL).then(res => res.json());
 
-        this.setState({ residence, msg: "" });
-    }
+    this.setState({ residence, msg: "" });
+  }
+
   render() {
-    return (<div> 
-          <BootstrapTable
-          striped
-          hover
-          bootstrap4
-          keyField='id'
-          data={this.state.residence}
-          columns={labels}
-          filter={filterFactory()}
-          pagination={paginationFactory()}
-          cellEdit={cellEditFactory({
-              mode: 'dbclick', afterSaveCell: (o, n, r) => {
-                  const options = facade.makeOptions("PUT", true, r );
-                  fetch(URL2 + r.id, options, console.log(r));                  
-              }
-          })}
+    return (<div>
+      <BootstrapTable
+        striped
+        hover
+        bootstrap4
+        keyField='id'
+        data={this.state.residence}
+        columns={labels}
+        filter={filterFactory()}
+        pagination={paginationFactory()}
+        cellEdit={cellEditFactory({
+          mode: 'dbclick', afterSaveCell: (o, n, r) => {
+            const options = facade.makeOptions("PUT", true, r);
+            fetch(URL2 + r.id, options, console.log(r));
+          }
+        })}
       />
-  </div>
+    </div>
     );
   }
 }
