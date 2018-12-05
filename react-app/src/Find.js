@@ -69,7 +69,7 @@ const labels = [{
     filter: textFilter()
 },*/ {
     dataField: 'rent',
-    text: 'Månedlig leje',
+    text: 'Leje',
     sort: true,
     filter: textFilter()
 },
