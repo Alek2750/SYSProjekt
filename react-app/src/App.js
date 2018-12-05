@@ -4,10 +4,10 @@ import './main.css';
 import Navbar from './NaviBar'
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import AppClient from './AppClientPagination'
-//import Jwt from './Jwt';
+import Jwt from './Jwt';
 import ResidenceList from './ResidenceList';
 import Home from './Home';
-import Jwt from './Login';
+import Login from './Login';
 import Register from './Register';
 import Find from './Find';
 import Details from './Details';
@@ -23,7 +23,7 @@ class App extends Component {
         <div>
           <Navbar />
           <Route exact path="/" component={Home} />
-          <Route path="/Login" component={Jwt} />
+          <Route path="/Login" component={Login} />
           <Route path="/DataTable" component={AppClient} />
           <Route path="/ResidenceList" component={ResidenceList} />
           <Route path="/Register" component={Register} />

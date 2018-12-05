@@ -79,6 +79,18 @@ const labels = [{
     text: 'Depositum',
     sort: true,
     filter: textFilter()
+ },
+ {
+    dataField: 'openhouse',
+    text: 'Åbent hus',
+    sort: true,
+    filter: textFilter()
+ },
+ {
+    dataField: 'sold',
+    text: 'Solgt',
+    sort: true,
+    filter: textFilter()
  }/*, {
     dataField: 'aconto',
     text: 'Aconto',
@@ -109,8 +121,7 @@ class ResidenceList extends Component {
 
     render() {
 
-        return <div>
-            <h4>Boliger</h4>
+        return <div>            
             <BootstrapTable
                 striped
                 hover
