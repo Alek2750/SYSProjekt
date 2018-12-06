@@ -11,13 +11,20 @@ import { Jumbotron, Grid, Image, Button } from 'react-bootstrap';
 
 const URL = "http://localhost:8084/jwtbackend/api/info/Housing/"; //Indsæt URL for API
 const URL2 = "http://localhost:8084/jwtbackend/api/info/"; //Indsæt URL for API
+
+const btnClick = (e, id) =>{
+  
+}
+
 const addButtonLancamento = (cell, row) => {
   return (
     <div>
-      <Button type="button" className="btn btn-info" onClick={console.log("TEST")}>Detaljer</Button>
+      <Button type="button" className="btn btn-info" onClick={(e, id) => btnClick(e, id)}>Detaljer</Button>
     </div>
   )
 }
+
+
 const labels = [{
   dataField: 'address',
   text: 'Adresse',

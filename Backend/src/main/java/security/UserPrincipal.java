@@ -29,6 +29,7 @@ public class UserPrincipal implements Principal {
   }
 
   public boolean isUserInRole(String role) {
+      System.out.println("Hey");
     return this.roles.contains(role);
   }
 }

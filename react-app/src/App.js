@@ -29,7 +29,7 @@ class App extends Component {
           <Route path="/ResidenceList" component={ResidenceList} />
           <Route path="/Register" component={Register} />
           <Route path="/Find" component={Find} />
-          <Route path="/Details" component={Details} />
+          <Route path="/Details/:id" component={Details} />
           <Route path="/CustomerService" component={CustomerService} />
           <Footer />
         </div>
