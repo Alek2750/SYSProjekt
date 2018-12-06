@@ -13,14 +13,14 @@ const URL = "http://localhost:8084/jwtbackend/api/info/Housing/"; //Indsæt URL 
 const URL2 = "http://localhost:8084/jwtbackend/api/info/"; //Indsæt URL for API
 
 const btnClick = (e, id) =>{
-  
+  console.log(e,);
 }
 
 const addButtonLancamento = (cell, row) => {
   return (
-    <div>
-      <Button type="button" className="btn btn-info" onClick={(e, id) => btnClick(e, id)}>Detaljer</Button>
-    </div>
+    <form action="/Contact">
+      <Button type="button" className="btn btn-info" onClick={(e,cell) => btnClick(e,cell)}>Detaljer</Button>
+    </form>
   )
 }
 
