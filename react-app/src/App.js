@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
-//import './App.css';
 import './main.css';
 import Navbar from './NaviBar'
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import AppClient from './AppClientPagination'
-import Jwt from './Jwt';
 import ResidenceList from './ResidenceList';
 import Home from './Home';
 import Login from './Login';
@@ -14,9 +12,7 @@ import Details from './Details';
 import Footer from './Footer';
 import CustomerService from './CustomerService';
 import Contact from './Contact';
-//import facade from "./apiFacade";
 
-//const Logout = () => <div>{facade.logout()}You have now been logged out</div>;
 
 class App extends Component {
   render() {

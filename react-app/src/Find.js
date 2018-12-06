@@ -7,7 +7,7 @@ import filterFactory, { textFilter } from 'react-bootstrap-table2-filter';
 import paginationFactory from 'react-bootstrap-table2-paginator';
 import cellEditFactory from 'react-bootstrap-table2-editor';
 import facade from "./apiFacade";
-import { Jumbotron, Grid, Image, Button } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 
 const URL = "http://localhost:8084/jwtbackend/api/info/Housing/"; //Indsæt URL for API
 const URL2 = "http://localhost:8084/jwtbackend/api/info/"; //Indsæt URL for API
