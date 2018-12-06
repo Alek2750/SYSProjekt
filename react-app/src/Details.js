@@ -241,7 +241,7 @@ class Details extends Component {
 
                   </div>
                   <div class="card-footer">
-                  <form action="Contact">
+                  <form action="/Contact">
                     <button id="search" class="btn btn-primary" name="search"
                       type="submit">
                       <i class="fa fa-phone"></i>Skriv til udlejer
