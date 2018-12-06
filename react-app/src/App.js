@@ -12,6 +12,7 @@ import Details from './Details';
 import Footer from './Footer';
 import CustomerService from './CustomerService';
 import Contact from './Contact';
+import RegisterBolig from './RegisterBolig';
 
 
 class App extends Component {
@@ -29,6 +30,7 @@ class App extends Component {
           <Route path="/Details/:id" component={Details} />
           <Route path="/CustomerService" component={CustomerService} />
           <Route path="/Contact" component={Contact} />
+          <Route path="/OpretBolig" component={RegisterBolig} />
           <Footer />
         </div>
       </Router>

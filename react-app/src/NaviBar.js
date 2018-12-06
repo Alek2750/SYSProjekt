@@ -27,7 +27,7 @@ class NaviBar extends Component {
 							<span class="sr-only">(current)</span> </a></li>
                             <li class="nav-item"><a class="nav-link" href="Find">Søg
 							bolig</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Udlej
+                            <li class="nav-item"><a class="nav-link" href="OpretBolig">Udlej
 							bolig</a></li>
                             <li class="nav-item"><a class="nav-link" href="#">Lejekontrakter</a>
                             </li>
