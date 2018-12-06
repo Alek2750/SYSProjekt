@@ -13,6 +13,7 @@ import Find from './Find';
 import Details from './Details';
 import Footer from './Footer';
 import CustomerService from './CustomerService';
+import Contact from './Contact';
 //import facade from "./apiFacade";
 
 //const Logout = () => <div>{facade.logout()}You have now been logged out</div>;
@@ -31,6 +32,7 @@ class App extends Component {
           <Route path="/Find" component={Find} />
           <Route path="/Details/:id" component={Details} />
           <Route path="/CustomerService" component={CustomerService} />
+          <Route path="/Contact" component={Contact} />
           <Footer />
         </div>
       </Router>
