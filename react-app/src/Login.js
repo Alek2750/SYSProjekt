@@ -33,7 +33,7 @@ class Login extends Component {
                             <form type="POST" onChange={this.onChange} >
                                 <input type="text" name="user" placeholder="Email" id="username" />
                                 <input name="pass" type="password" placeholder="Password" id="password" />
-                                <input name="login" className="btn btn-success" onClick={this.login} value="Log Ind" />
+                                <input type="submit" name="login" className="btn btn-success" onClick={this.login} value="Log Ind" />
                             </form>
                             <div className="login-help">
                                 <a href="#">Intet Login? </a> - <a href="/register">Opret en gratis bruger</a>
