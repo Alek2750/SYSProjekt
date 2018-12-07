@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import './main.css';
 import slidefoto1 from './images/black-and-white-2.jpg';
+import { FaPhone, FaEnvelope, FaClock } from 'react-icons/fa';
 
 class Details extends Component {
   render() {
@@ -235,16 +236,16 @@ class Details extends Component {
                 <div class="card">
                   <div class="card-header">Kontakt Udlejer</div>
                   <div class="card-body">
-                    <h5 class="card-title"><i class="fa fa-phone"></i>Telephone</h5>
-                    <h5 class="card-title"><i class="fa fa-mail-reply-all"></i>Email</h5>
-                    <h5 class="card-title"><i class="fa fa-clock-o"></i>2+ år lejeperiode</h5>
+                    <h5 class="card-title"><FaPhone/> Telephone</h5>
+                    <h5 class="card-title"><FaEnvelope/> Email</h5>
+                    <h5 class="card-title"><FaClock/> 2+ år lejeperiode</h5>
 
                   </div>
                   <div class="card-footer">
                   <form action="/Contact">
                     <button id="search" class="btn btn-primary" name="search"
                       type="submit">
-                      <i class="fa fa-phone"></i>Skriv til udlejer
+                      <FaEnvelope/> Skriv til udlejer
 						</button></form>
                   </div>
 

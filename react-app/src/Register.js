@@ -43,16 +43,16 @@ class Register extends Component {
 		);
 	}
 }
-class Jwt extends Component {
+//class Jwt extends Component {
    
-    constructor(props) {
-        super(props);
-        this.state = { loggedIn: false }
-    }
+  //  constructor(props) {
+    //    super(props);
+      //  this.state = { loggedIn: false }
+    //}
     
-    register = (user, pass) => {
-        facade.register(user, pass)
-            .then(res => this.setState({ loggedIn: true }));
-	}
-}
+//    register = (user, pass) => {
+//        facade.register(user, pass)
+//            .then(res => this.setState({ loggedIn: true }));
+//	}
+//}
 export default Register;

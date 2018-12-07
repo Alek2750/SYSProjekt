@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { FaPhone, FaEnvelope, FaClock } from 'react-icons/fa';
+//Husk: Npm install react-icons --save
 class CustomerService extends Component{
     render(){
         return(

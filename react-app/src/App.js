@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './main.css';
-import Navbar from './NaviBar'
+import Navbar from './NaviBar';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import AppClient from './AppClientPagination'
 import ResidenceList from './ResidenceList';
