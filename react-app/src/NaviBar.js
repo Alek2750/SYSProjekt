@@ -22,15 +22,15 @@ class NaviBar extends Component {
                             <li class="dropdown"/>
                             <ul class="dropdown-menu"/>
 							<span class="sr-only">(current)</span> </a></li>
-                            <li class="nav-item"><a class="nav-link" href="Find">Søg
+                            <li class="nav-item"><a class="nav-link" href="/Find">Søg
 							bolig</a></li>
-                            <li class="nav-item"><a class="nav-link" href="OpretBolig">Opret bolig
+                            <li class="nav-item"><a class="nav-link" href="/OpretBolig">Opret bolig
 							</a></li>
                             <li class="nav-item"><a class="nav-link" href="#">Lejekontrakter</a>
                             </li>
-                            <li class="nav-item"><a class="nav-link" href="Register">Opret
+                            <li class="nav-item"><a class="nav-link" href="/Register">Opret
 							bruger</a></li>
-                            <li class="nav-item"><a class="nav-link" href="Login">Log ind</a>
+                            <li class="nav-item"><a class="nav-link" href="/Login">Log ind</a>
                             </li>
                         </ul>
                     </div>
