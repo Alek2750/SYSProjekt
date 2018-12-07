@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 //import './App.css';
 import './main.css';
-import Navbar from './NaviBar'
+import Navbar from './NaviBar';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import AppClient from './AppClientPagination'
-import Jwt from './Jwt';
+import AppClient from './AppClientPagination';
 import ResidenceList from './ResidenceList';
 import Home from './Home';
 import Login from './Login';
