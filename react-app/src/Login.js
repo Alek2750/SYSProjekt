@@ -35,7 +35,7 @@ class Login extends Component {
                                 <input type="submit" name="login" className="btn btn-success" onClick={this.login} value="Log Ind" />
                             </form>
                             <div className="login-help">
-                                <a href="#">Intet Login? </a> - <a href="/register">Opret en gratis bruger</a>
+                                <a href="/register">Intet Login? </a> - <a href="/register">Opret en gratis bruger</a>
                             </div>
                         </div>
                     </div>

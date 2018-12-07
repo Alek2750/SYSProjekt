@@ -63,7 +63,7 @@ class Details extends Component {
             <div class="row">
               <div class="col-lg-12 col-sm-6 portfolio-item">
                 <h4 class="card-title">
-                  <a href="#">4 værelses villa på 123 m²</a>
+                  <a href="/Details/:id">4 værelses villa på 123 m²</a>
                 </h4>
                 <p class="card-text">Danhaven, 2500 Valby</p>
               </div>

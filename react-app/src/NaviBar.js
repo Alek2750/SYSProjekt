@@ -8,7 +8,7 @@ class NaviBar extends Component {
         return (
             <nav class="navbar navbar-expand-lg bg-white fixed-top">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="/"><img src={logo2} /></a>
+                    <a class="navbar-brand" href="/"><img src={logo2} alt="logo"/></a>
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
                             <span class="icon-bar"></span>
@@ -26,7 +26,7 @@ class NaviBar extends Component {
 							bolig</a></li>
                             <li class="nav-item"><a class="nav-link" href="/OpretBolig">Opret bolig
 							</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Lejekontrakter</a>
+                            <li class="nav-item"><a class="nav-link" href="/">Lejekontrakter</a>
                             </li>
                             <li class="nav-item"><a class="nav-link" href="/Register">Opret
 							bruger</a></li>
