@@ -1,5 +1,10 @@
 import React, { Component } from 'react'
 import testcity from './images/testcity.jpg'
+import aarhus from './images/aarhus.png'
+import odense from './images/odense.png'
+import copenhagen from './images/copenhagen.png'
+import amager from './images/amager.png'
+import fyn from './images/fyn.png'
 import './main.css';
 
 
@@ -62,35 +67,35 @@ export default class Home extends Component {
                         <div class="col-lg-custom portfolio-item">
                             <div class="card h-100">
                                 <span class="Frontpage__cities-item__name">København</span> <a
-                                    href="#"><img class="card-img-top" src={testcity}
+                                    href="#"><img class="card-img-top" src={copenhagen}
                                         alt="" /> </a>
                             </div>
                         </div>
                         <div class="col-lg-custom portfolio-item">
                             <span class="Frontpage__cities-item__name">Odense</span>
                             <div class="card h-100">
-                                <a href="#"><img class="card-img-top" src={testcity}
+                                <a href="#"><img class="card-img-top" src={odense}
                                     alt="" /> </a>
                             </div>
                         </div>
                         <div class="col-lg-custom portfolio-item">
                             <span class="Frontpage__cities-item__name">Fyn</span>
                             <div class="card h-100">
-                                <a href="#"><img class="card-img-top" src={testcity}
+                                <a href="#"><img class="card-img-top" src={fyn}
                                     alt="" /> </a>
                             </div>
                         </div>
                         <div class="col-lg-custom portfolio-item">
                             <span class="Frontpage__cities-item__name">En anden by</span>
                             <div class="card h-100">
-                                <a href="#"><img class="card-img-top" src={testcity}
+                                <a href="#"><img class="card-img-top" src={amager}
                                     alt="" /> </a>
                             </div>
                         </div>
                         <div class="col-lg-custom portfolio-item">
                             <span class="Frontpage__cities-item__name">En tredje by</span>
                             <div class="card h-100">
-                                <a href="#"><img class="card-img-top" src={testcity}
+                                <a href="#"><img class="card-img-top" src={aarhus}
                                     alt="" /> </a>
                             </div>
                         </div>
