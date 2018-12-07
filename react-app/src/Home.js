@@ -1,9 +1,7 @@
 import React, { Component } from 'react'
-//import { Link } from 'react-router-dom';
 import testcity from './images/testcity.jpg'
-//import { Jumbotron, Grid, Image, Button } from 'react-bootstrap';
 import './main.css';
-//import './Home.css';
+
 
 export default class Home extends Component {
     render() {

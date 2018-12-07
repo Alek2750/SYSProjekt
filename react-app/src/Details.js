@@ -242,9 +242,9 @@ class Details extends Component {
 
                   </div>
                   <div class="card-footer">
-                  <form action="Register">
+                  <form action="/Contact">
                     <button id="search" class="btn btn-primary" name="search"
-                      type="submit" onClick="alert('Hello from button!')">
+                      type="submit">
                       <FaEnvelope/> Skriv til udlejer
 						</button></form>
                   </div>

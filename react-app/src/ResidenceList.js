@@ -5,9 +5,7 @@ import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
 import filterFactory, { textFilter } from 'react-bootstrap-table2-filter';
 import paginationFactory from 'react-bootstrap-table2-paginator';
 import cellEditFactory from 'react-bootstrap-table2-editor';
-import afterSaveCell from 'react-bootstrap-table2-editor';
 import facade from "./apiFacade";
-//import { Type } from 'react-bootstrap-table2-editor';
 
 
 const URL = "http://localhost:8084/jwtbackend/api/info/Housing/"; //Indsæt URL for API

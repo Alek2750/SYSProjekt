@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-//import './App.css';
 import './main.css';
 import Navbar from './NaviBar';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import AppClient from './AppClientPagination';
+import AppClient from './AppClientPagination'
 import ResidenceList from './ResidenceList';
 import Home from './Home';
 import Login from './Login';
@@ -12,9 +11,9 @@ import Find from './Find';
 import Details from './Details';
 import Footer from './Footer';
 import CustomerService from './CustomerService';
-//import facade from "./apiFacade";
+import Contact from './Contact';
+import RegisterBolig from './RegisterBolig';
 
-//const Logout = () => <div>{facade.logout()}You have now been logged out</div>;
 
 class App extends Component {
   render() {
@@ -28,8 +27,10 @@ class App extends Component {
           <Route path="/ResidenceList" component={ResidenceList} />
           <Route path="/Register" component={Register} />
           <Route path="/Find" component={Find} />
-          <Route path="/Details" component={Details} />
+          <Route path="/Details/:id" component={Details} />
           <Route path="/CustomerService" component={CustomerService} />
+          <Route path="/Contact" component={Contact} />
+          <Route path="/OpretBolig" component={RegisterBolig} />
           <Footer />
         </div>
       </Router>

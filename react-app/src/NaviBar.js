@@ -1,13 +1,7 @@
 import React, { Component } from "react";
-//import './CustomNavbar.css'
 import './main.css';
 import logo2 from './images/logo2.png'
-//import { Navbar, Nav, NavItem } from "react-bootstrap";
-//import { Link } from 'react-router-dom';
-//import { user } from './Jwt.js';
 
-//Note: 'npm install react-bootstrap --save' kan forekomme nødvendigt
-//Note: 'npm install react-router-dom --save' kan forekomme nødvendigt 
 
 class NaviBar extends Component {
     render() {
@@ -22,14 +16,15 @@ class NaviBar extends Component {
                             <span class="icon-bar"></span>
                         </button>
                     </div>
-
                     <div class="collapse navbar-collapse" id="myNavbar">
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item active"><a class="nav-link" href="/">Home
+                            <li class="dropdown"/>
+                            <ul class="dropdown-menu"/>
 							<span class="sr-only">(current)</span> </a></li>
                             <li class="nav-item"><a class="nav-link" href="Find">Søg
 							bolig</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Udlej
+                            <li class="nav-item"><a class="nav-link" href="OpretBolig">Opret
 							bolig</a></li>
                             <li class="nav-item"><a class="nav-link" href="#">Lejekontrakter</a>
                             </li>
@@ -44,6 +39,5 @@ class NaviBar extends Component {
         )
     }
 }
-//CSS'en forbundet til App.css
 
 export default NaviBar;
