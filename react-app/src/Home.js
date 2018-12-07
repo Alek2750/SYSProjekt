@@ -11,90 +11,90 @@ export default class Home extends Component {
     render() {
         return (
             <div>
-                <section id="pagebanner" class="align-middle">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <h1 class="Frontpage__top-header">Find din næste lejlighed</h1>
+                <section id="pagebanner" className="align-middle">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-lg-12">
+                                <h1 className="Frontpage__top-header">Find din næste lejlighed</h1>
                             </div>
-                            <div class="col-lg-2"></div>
-                            <div class="col-lg-8 center">
+                            <div className="col-lg-2"></div>
+                            <div className="col-lg-8 center">
 
                                 <form action="Find">
-                                    <label for="find" class="sr-only"></label> <input id="find"
-                                        class="custom-form-control input-group-lg" type="text" name="find"
+                                    <label htmlFor="find" className="sr-only"></label> <input id="find"
+                                        className="custom-form-control input-group-lg" type="text" name="find"
                                         title="Hvor vil du gerne bo?" placeholder="Hvor vil du gerne bo?" />
 
-                                    <button class="btn find">Søg blandt 10.805 lejeboliger</button>
+                                    <button className="btn find">Søg blandt 10.805 lejeboliger</button>
                                 </form>
                             </div>
-                            <div class="col-lg-2"></div>
+                            <div className="col-lg-2"></div>
                         </div>
                     </div>
                 </section>
 
-                <section class="info-box">
-                    <div class="container center">
-                        <div class="row">
-                            <div class="col-lg-4 col-sm-6 portfolio-item">
-                                <h4 class="card-title">
+                <section className="info-box">
+                    <div className="container center">
+                        <div className="row">
+                            <div className="col-lg-4 col-sm-6 portfolio-item">
+                                <h4 className="card-title">
                                     <a href="/">9.008 nye lejligheder</a>
                                 </h4>
-                                <p class="card-text">oprettet de sidste 30 dage</p>
+                                <p className="card-text">oprettet de sidste 30 dage</p>
                             </div>
-                            <div class="col-lg-4 col-sm-6 portfolio-item">
-                                <h4 class="card-title">
+                            <div className="col-lg-4 col-sm-6 portfolio-item">
+                                <h4 className="card-title">
                                     <a href="/">17.133 brugere</a>
                                 </h4>
-                                <p class="card-text">har fundet bolig de sidste 2 måneder</p>
+                                <p className="card-text">har fundet bolig de sidste 2 måneder</p>
                             </div>
-                            <div class="col-lg-4 col-sm-6 portfolio-item">
-                                <h4 class="card-title">
+                            <div className="col-lg-4 col-sm-6 portfolio-item">
+                                <h4 className="card-title">
                                     <a href="CustomerService">Kundeservice</a>
                                 </h4>
-                                <p class="card-text">8-22 hver dag – Hele året</p>
+                                <p className="card-text">8-22 hver dag – Hele året</p>
                             </div>
                         </div>
                     </div>
                 </section>
 
 
-                <div class="container info-box-2">
+                <div className="container info-box-2">
 
-                    <div class="row">
+                    <div className="row">
 
-                        <div class="col-lg-custom portfolio-item">
-                            <div class="card h-100">
-                                <span class="Frontpage__cities-item__name">København</span> <a
-                                    href="/"><img class="card-img-top" src={copenhagen}
+                        <div className="col-lg-custom portfolio-item">
+                            <div className="card h-100">
+                                <span className="Frontpage__cities-item__name">København</span> <a
+                                    href="/"><img className="card-img-top" src={copenhagen}
                                         alt="" /> </a>
                             </div>
                         </div>
-                        <div class="col-lg-custom portfolio-item">
-                            <span class="Frontpage__cities-item__name">Odense</span>
-                            <div class="card h-100">
-                                <a href="/"><img class="card-img-top" src={odense}
+                        <div className="col-lg-custom portfolio-item">
+                            <span className="Frontpage__cities-item__name">Odense</span>
+                            <div className="card h-100">
+                                <a href="/"><img className="card-img-top" src={odense}
                                     alt="" /> </a>
                             </div>
                         </div>
-                        <div class="col-lg-custom portfolio-item">
-                            <span class="Frontpage__cities-item__name">Fyn</span>
-                            <div class="card h-100">
-                                <a href="/"><img class="card-img-top" src={fyn}
+                        <div className="col-lg-custom portfolio-item">
+                            <span className="Frontpage__cities-item__name">Fyn</span>
+                            <div className="card h-100">
+                                <a href="/"><img className="card-img-top" src={fyn}
                                     alt="" /> </a>
                             </div>
                         </div>
-                        <div class="col-lg-custom portfolio-item">
-                            <span class="Frontpage__cities-item__name">En anden by</span>
-                            <div class="card h-100">
-                                <a href="/"><img class="card-img-top" src={amager}
+                        <div className="col-lg-custom portfolio-item">
+                            <span className="Frontpage__cities-item__name">En anden by</span>
+                            <div className="card h-100">
+                                <a href="/"><img className="card-img-top" src={amager}
                                     alt="" /> </a>
                             </div>
                         </div>
-                        <div class="col-lg-custom portfolio-item">
-                            <span class="Frontpage__cities-item__name">En tredje by</span>
-                            <div class="card h-100">
-                                <a href="/"><img class="card-img-top" src={aarhus}
+                        <div className="col-lg-custom portfolio-item">
+                            <span className="Frontpage__cities-item__name">En tredje by</span>
+                            <div className="card h-100">
+                                <a href="/"><img className="card-img-top" src={aarhus}
                                     alt="" /> </a>
                             </div>
                         </div>

@@ -5,9 +5,9 @@ class RegisterBolig extends Component {
     render() {
         return (
             <div>
-                <section id="login" class="align-middle">
-                    <div class="container">
-                        <div class="loginmodal-container">
+                <section id="login" className="align-middle">
+                    <div className="container">
+                        <div className="loginmodal-container">
                             <h1>Opret Bolig</h1>
                             <br />
                             <form type="POST" onChange={this.onChange} >
@@ -23,7 +23,7 @@ class RegisterBolig extends Component {
                                 <input type="text" placeholder="Husdyr tilladt" name="animals" id="animals" />
                                 <input type="text" placeholder="Energimærke" name="energy" id="energy" />
                                 <input type="text" placeholder="Lejeperiode" name="period" id="period" />
-                                <input type="submit" name="send" class="btn btn-success" value="Opret Bolig" onClick={this.register} />
+                                <input type="submit" name="send" className="btn btn-success" value="Opret Bolig" onClick={this.register} />
                             </form>
                         </div>
                     </div>

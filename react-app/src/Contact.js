@@ -5,9 +5,9 @@ class Contact extends Component {
     render() {
         return (
             <div>
-                <section id="login" class="align-middle">
-                    <div class="container">
-                        <div class="loginmodal-container">
+                <section id="login" className="align-middle">
+                    <div className="container">
+                        <div className="loginmodal-container">
                             <h1>Kontakt mægler</h1>
                             <br />
                             <form type="POST" onChange={this.onChange} >
@@ -16,7 +16,7 @@ class Contact extends Component {
                                 <input type="text" placeholder="E-mail" name="email" id="email" />
                                 <input type="text" placeholder="Bolig Titel" name="title" id="title" />
                                 <input type="text" placeholder="Skriv besked" name="message" id="message" />
-                                <input type="submit" name="send" class="btn btn-warning" value="Indsend Besked" onClick={this.register} />
+                                <input type="submit" name="send" className="btn btn-warning" value="Indsend Besked" onClick={this.register} />
                             </form>
                         </div>
                     </div>

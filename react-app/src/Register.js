@@ -24,15 +24,15 @@ class Register extends Component {
 	render() {
 		return (
 			<div>
-				<section id="login" class="align-middle">
-					<div class="container">
-						<div class="loginmodal-container">
+				<section id="login" className="align-middle">
+					<div className="container">
+						<div className="loginmodal-container">
 							<h1>Opret Bruger</h1>
 							<br />
 							<form type="POST" onChange={this.onChange} >
 								<input type="text" placeholder="Email" name="email" id="username" />
 								<input type="password" name="pass" placeholder="Password" id="password" />
-								<input type="submit" name="login" class="btn btn-warning" value="Opret Bruger" onClick={this.register} />
+								<input type="submit" name="login" className="btn btn-warning" value="Opret Bruger" onClick={this.register} />
 							</form>
 						</div>
 					</div>

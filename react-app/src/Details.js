@@ -8,80 +8,80 @@ class Details extends Component {
   render() {
     return (
       <div>
-        <section id="detailsbanner" class="align-middle">
-          <div class="container">
-            <div class="row">
-              <div id="carouselExampleIndicators" class="carousel slide"
+        <section id="detailsbanner" className="align-middle">
+          <div className="container">
+            <div className="row">
+              <div id="carouselExampleIndicators" className="carousel slide"
                 data-ride="carousel">
-                <ol class="carousel-indicators">
+                <ol className="carousel-indicators">
                   <li data-target="#carouselExampleIndicators" data-slide-to="0"
-                    class="active"></li>
+                    className="active"></li>
                   <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                   <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
                 </ol>
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img class="d-block w-100" src={slidefoto1}
+                <div className="carousel-inner">
+                  <div className="carousel-item active">
+                    <img className="d-block w-100" src={slidefoto1}
                       alt="First slide" />
-                    <div class="carousel-caption d-none d-md-block">
+                    <div className="carousel-caption d-none d-md-block">
                       <h5>Sitting Room</h5>
                       <p>1200m sq</p>
                     </div>
                   </div>
-                  <div class="carousel-item">
-                    <img class="d-block w-100" src={slidefoto1}
+                  <div className="carousel-item">
+                    <img className="d-block w-100" src={slidefoto1}
                       alt="Second slide" />
-                    <div class="carousel-caption d-none d-md-block">
+                    <div className="carousel-caption d-none d-md-block">
                       <h5>Sitting Room</h5>
                       <p>1200m sq</p>
                     </div>
                   </div>
-                  <div class="carousel-item">
-                    <img class="d-block w-100" src={slidefoto1}
+                  <div className="carousel-item">
+                    <img className="d-block w-100" src={slidefoto1}
                       alt="Third slide" />
-                    <div class="carousel-caption d-none d-md-block">
+                    <div className="carousel-caption d-none d-md-block">
                       <h5>Dinning Area</h5>
                       <p>1200m sq</p>
                     </div>
                   </div>
                 </div>
-                <a class="carousel-control-prev" href="#carouselExampleIndicators"
+                <a className="carousel-control-prev" href="#carouselExampleIndicators"
                   role="button" data-slide="prev"> <span
-                    class="carousel-control-prev-icon" aria-hidden="true"></span> <span
-                      class="sr-only">Previous</span> </a> <a class="carousel-control-next"
+                    className="carousel-control-prev-icon" aria-hidden="true"></span> <span
+                      className="sr-only">Previous</span> </a> <a className="carousel-control-next"
                         href="#carouselExampleIndicators" role="button" data-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="sr-only">Next</span> </a>
+                  <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span className="sr-only">Next</span> </a>
               </div>
-              <div class="col-lg-2"></div>
+              <div className="col-lg-2"></div>
             </div>
           </div>
         </section>
 
-        <section class="info-details-box-1">
-          <div class="container center">
-            <div class="row">
-              <div class="col-lg-12 col-sm-6 portfolio-item">
-                <h4 class="card-title">
+        <section className="info-details-box-1">
+          <div className="container center">
+            <div className="row">
+              <div className="col-lg-12 col-sm-6 portfolio-item">
+                <h4 className="card-title">
                   <a href="/Details/:id">4 værelses villa på 123 m²</a>
                 </h4>
-                <p class="card-text">Danhaven, 2500 Valby</p>
+                <p className="card-text">Danhaven, 2500 Valby</p>
               </div>
             </div>
           </div>
         </section>
 
 
-        <div class="container info-details-box-2">
+        <div className="container info-details-box-2">
 
-          <div class="row">
+          <div className="row">
 
-            <div class="col-lg-8 portfolio-item">
-              <div class="row">
-                <div class="col-lg-12 portfolio-item">
-                  <h3 class="AdDetail__contents-details-title">Lovely renovated
+            <div className="col-lg-8 portfolio-item">
+              <div className="row">
+                <div className="col-lg-12 portfolio-item">
+                  <h3 className="AdDetail__contents-details-title">Lovely renovated
 							villa, in quiet villa area in Valby</h3>
-                  <p class="SmartTextContainer__text AdDetail__contents-details-description comment">The
+                  <p className="SmartTextContainer__text AdDetail__contents-details-description comment">The
                     house has been renovated regularly. On the ground floor is an
                     entrance hall, a nice bathroom, and a new modern kitchen in open
                     connection to a beautiful living room with floor heating. From
@@ -96,11 +96,11 @@ class Details extends Component {
                     minute walk to beautiful green parkland alongside Harrestrup
 							Creek.</p>
                 </div>
-                <div class="col-lg-6 portfolio-item">
+                <div className="col-lg-6 portfolio-item">
 
 
-                  <table class="table table-bordered table-striped">
-                    <thead class="black white-text">
+                  <table className="table table-bordered table-striped">
+                    <thead className="black white-text">
                       <tr>
                         <th scope="col">Desc</th>
                         <th scope="col">Info</th>
@@ -166,11 +166,11 @@ class Details extends Component {
 
 
                 </div>
-                <div class="col-lg-6 portfolio-item">
+                <div className="col-lg-6 portfolio-item">
 
 
-                  <table class="table table-bordered table-striped">
-                    <thead class="black white-text">
+                  <table className="table table-bordered table-striped">
+                    <thead className="black white-text">
                       <tr>
 
                         <th scope="col">Desc</th>
@@ -232,18 +232,18 @@ class Details extends Component {
 
                 </div>
               </div>
-              <center><div class="col-lg-4 portfolio-item contact-landlord">
-                <div class="card">
-                  <div class="card-header">Kontakt Udlejer</div>
-                  <div class="card-body">
-                    <h5 class="card-title"><FaPhone/> Telephone</h5>
-                    <h5 class="card-title"><FaEnvelope/> Email</h5>
-                    <h5 class="card-title"><FaClock/> 2+ år lejeperiode</h5>
+              <center><div className="col-lg-4 portfolio-item contact-landlord">
+                <div className="card">
+                  <div className="card-header">Kontakt Udlejer</div>
+                  <div className="card-body">
+                    <h5 className="card-title"><FaPhone/> Telephone</h5>
+                    <h5 className="card-title"><FaEnvelope/> Email</h5>
+                    <h5 className="card-title"><FaClock/> 2+ år lejeperiode</h5>
 
                   </div>
-                  <div class="card-footer">
+                  <div className="card-footer">
                   <form action="/Contact">
-                    <button id="search" class="btn btn-primary" name="search"
+                    <button id="search" className="btn btn-primary" name="search"
                       type="submit">
                       <FaEnvelope/> Skriv til udlejer
 						</button></form>

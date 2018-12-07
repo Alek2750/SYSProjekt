@@ -5,9 +5,9 @@ class Footer extends Component {
   render() {
     return (
         
-        <footer class="py-5 bg-dark">
-                    <div class="container">
-                        <p class="m-0 text-center text-white">Copyright &copy;
+        <footer className="py-5 bg-dark">
+                    <div className="container">
+                        <p className="m-0 text-center text-white">Copyright &copy;
 				Boligrunner 2018</p>
                     </div>
 
