@@ -5,7 +5,7 @@ Dette System udviklingsprojekt er udført på 3. semester af studerene på Datam
 
 **Backend køres ved:** Åben projektet i et udvalgt IDE tool og "Clean/Build" - derefter "Run" projektet.
 
-**React-app køres ved:** I mappen, åben en kommando konsol (Git bash, Cmd prompt eller lign.) gennemse filen "NaviBar.js" og installér de nødvendige plugins. Derefter kør `npm start` i konsollen for at køre projektet. 
+**React-app køres ved:** I mappen, åben en kommando konsol (Git bash, Cmd prompt eller lign.) installér: `npm install react-icons --save`, `npm install react-router-dom --save` og `npm install react-bootstrap --save` Derefter kør `npm start` i konsollen for at køre projektet. 
 
 **React-native-app køres ved:** Denne applikation kræver en smartphone med "Expo" App'en installeret! Hvis Node.js er installeret åbnes en kommando konsol i mappen hvor der gives kommandoerne: 
 ```
