@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-//import './App.css';
 import './main.css';
 import facade from "./apiFacade";
 
@@ -25,18 +24,18 @@ class Login extends Component {
     render() {
         return (
             <div>
-                <section id="login" class="align-middle">
-                    <div class="container">
-                        <div class="loginmodal-container">
+                <section id="login" className="align-middle">
+                    <div className="container">
+                        <div className="loginmodal-container">
                             <h1>Log ind</h1>
                             <br />
                             <form type="POST" onChange={this.onChange} >
-                                <input type="text" name="user" placeholder="Username" id="username" />
+                                <input type="text" name="user" placeholder="Email" id="username" />
                                 <input name="pass" type="password" placeholder="Password" id="password" />
-                                <input name="login" class="btn btn-success" onClick={this.login} value="Log Ind" />
+                                <input type="submit" name="login" className="btn btn-success" onClick={this.login} value="Log Ind" />
                             </form>
-                            <div class="login-help">
-                                <a href="#">Intet Login? </a> - <a href="register">Opret en gratis bruger</a>
+                            <div className="login-help">
+                                <a href="/register">Intet Login? </a> - <a href="/register">Opret en gratis bruger</a>
                             </div>
                         </div>
                     </div>
@@ -64,7 +63,6 @@ class LoggedIn extends Component {
     }
 }
 class Jwt extends Component {
-   
     constructor(props) {
         super(props);
         this.state = { loggedIn: false }
@@ -78,10 +76,6 @@ class Jwt extends Component {
         facade.login(user, pass)
             .then(res => this.setState({ loggedIn: true }));
     } //TODO
-    register = (user, pass) => {
-        facade.register(user, pass)
-            .then(res => this.setState({ loggedIn: true }));
-    }
     render() {
         return (
             <div>

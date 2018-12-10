@@ -42,7 +42,9 @@ import javax.validation.constraints.Size;
     , @NamedQuery(name = "Housing.findByDeposit", query = "SELECT h FROM Housing h WHERE h.deposit = :deposit")
     , @NamedQuery(name = "Housing.findByAconto", query = "SELECT h FROM Housing h WHERE h.aconto = :aconto")
     , @NamedQuery(name = "Housing.findByStartperiod", query = "SELECT h FROM Housing h WHERE h.startperiod = :startperiod")
-    , @NamedQuery(name = "Housing.findByCreated", query = "SELECT h FROM Housing h WHERE h.created = :created")})
+    , @NamedQuery(name = "Housing.findByCreated", query = "SELECT h FROM Housing h WHERE h.created = :created")
+    , @NamedQuery(name = "Housing.findBySold", query = "SELECT h FROM Housing h WHERE h.sold = :sold")
+    , @NamedQuery(name = "Housing.findByOpenhouse", query = "SELECT h FROM Housing h WHERE h.openhouse = :openhouse")})
 public class Housing implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -93,6 +95,11 @@ public class Housing implements Serializable {
     @Size(max = 20)
     @Column(name = "created")
     private String created;
+    @Column(name = "sold")
+    private Boolean sold;
+    @Size(max = 20)
+    @Column(name = "openhouse")
+    private String openhouse;
 
     public Housing() {
     }
@@ -245,6 +252,22 @@ public class Housing implements Serializable {
         this.created = created;
     }
 
+    public Boolean getSold() {
+        return sold;
+    }
+
+    public void setSold(Boolean sold) {
+        this.sold = sold;
+    }
+
+    public String getOpenhouse() {
+        return openhouse;
+    }
+
+    public void setOpenhouse(String openhouse) {
+        this.openhouse = openhouse;
+    }
+
     @Override
     public int hashCode() {
         int hash = 0;
@@ -267,7 +290,7 @@ public class Housing implements Serializable {
 
     @Override
     public String toString() {
-        return "Housing{" + "id=" + id + ", salesId=" + salesId + ", address=" + address + ", city=" + city + ", proptype=" + proptype + ", rooms=" + rooms + ", funiture=" + funiture + ", animals=" + animals + ", size=" + size + ", floor=" + floor + ", shareable=" + shareable + ", energy=" + energy + ", period=" + period + ", rent=" + rent + ", deposit=" + deposit + ", aconto=" + aconto + ", startperiod=" + startperiod + ", created=" + created + '}';
+        return "entity.Housing[ id=" + id + " ]";
     }
     
 }

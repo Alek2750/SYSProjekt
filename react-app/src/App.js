@@ -1,20 +1,19 @@
 import React, { Component } from 'react';
-//import './App.css';
 import './main.css';
-import Navbar from './NaviBar'
+import Navbar from './NaviBar';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import AppClient from './AppClientPagination'
-//import Jwt from './Jwt';
 import ResidenceList from './ResidenceList';
 import Home from './Home';
-import Jwt from './Login';
+import Login from './Login';
 import Register from './Register';
 import Find from './Find';
 import Details from './Details';
 import Footer from './Footer';
-//import facade from "./apiFacade";
+import CustomerService from './CustomerService';
+import Contact from './Contact';
+import RegisterBolig from './RegisterBolig';
 
-//const Logout = () => <div>{facade.logout()}You have now been logged out</div>;
 
 class App extends Component {
   render() {
@@ -23,12 +22,15 @@ class App extends Component {
         <div>
           <Navbar />
           <Route exact path="/" component={Home} />
-          <Route path="/Login" component={Jwt} />
+          <Route path="/Login" component={Login} />
           <Route path="/DataTable" component={AppClient} />
           <Route path="/ResidenceList" component={ResidenceList} />
           <Route path="/Register" component={Register} />
           <Route path="/Find" component={Find} />
-          <Route path="/Details" component={Details} />
+          <Route path="/Details/:id" component={Details} />
+          <Route path="/CustomerService" component={CustomerService} />
+          <Route path="/Contact" component={Contact} />
+          <Route path="/OpretBolig" component={RegisterBolig} />
           <Footer />
         </div>
       </Router>

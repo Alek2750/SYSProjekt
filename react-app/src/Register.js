@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-//import './App.css';
 import './main.css';
 import facade from "./apiFacade";
 
@@ -25,15 +24,15 @@ class Register extends Component {
 	render() {
 		return (
 			<div>
-				<section id="login" class="align-middle">
-					<div class="container">
-						<div class="loginmodal-container">
+				<section id="login" className="align-middle">
+					<div className="container">
+						<div className="loginmodal-container">
 							<h1>Opret Bruger</h1>
 							<br />
 							<form type="POST" onChange={this.onChange} >
 								<input type="text" placeholder="Email" name="email" id="username" />
 								<input type="password" name="pass" placeholder="Password" id="password" />
-								<input type="submit" name="login" class="btn btn-warning" value="Opret Bruger" onClick={this.register} />
+								<input type="submit" name="login" className="btn btn-warning" value="Opret Bruger" onClick={this.register} />
 							</form>
 						</div>
 					</div>
@@ -44,16 +43,16 @@ class Register extends Component {
 		);
 	}
 }
-class Jwt extends Component {
+//class Jwt extends Component {
    
-    constructor(props) {
-        super(props);
-        this.state = { loggedIn: false }
-    }
+  //  constructor(props) {
+    //    super(props);
+      //  this.state = { loggedIn: false }
+    //}
     
-    register = (user, pass) => {
-        facade.register(user, pass)
-            .then(res => this.setState({ loggedIn: true }));
-	}
-}
+//    register = (user, pass) => {
+//        facade.register(user, pass)
+//            .then(res => this.setState({ loggedIn: true }));
+//	}
+//}
 export default Register;
