@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 
-import AddCity from './AddCity/AddCity';
-import Cities from './Cities/Cities';
-import City from './Cities/City';
-import Location from './Cities/Location';
+import Login from './Login/Login';
+import Find from './Residence/Find';
+import Details from './Residence/Details';
 
 import { colors } from './theme'
 
@@ -12,23 +11,23 @@ import { createStackNavigator, createBottomTabNavigator } from 'react-navigation
 console.disableYellowBox = true
 
 const CitiesNav = createStackNavigator({
-    Cities: { screen: Cities },
-    City: { screen: City },
-    Location: { screen: Location }
+    "Find Bolig": { screen: Find },
+    "Detajler": { screen: Details },
 }, {
         navigationOptions: {
             headerStyle: {
                 backgroundColor: colors.primary
             },
-            headerTintColor: '#fff'
+            headerTintColor: '#000'
         }
     })
 
 const Tabs = createBottomTabNavigator({
-    Cities: { screen: CitiesNav },
-    AddCity: { screen: AddCity }
+    "Boliger": { screen: CitiesNav },
+    "Log Ind": { screen: Login }
 }, {
         tabBarOptions: {
+            activeTintColor: '#34725b',
             labelStyle: {
                 fontSize: 16,
                 bottom: 10,

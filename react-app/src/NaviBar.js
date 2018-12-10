@@ -1,5 +1,7 @@
-import React, { Component } from "react"
-import './CustomNavbar.css'
+import React, { Component } from "react";
+//import './CustomNavbar.css'
+import './main.css';
+import logo2 from './images/logo2.png'
 import { Navbar, Nav, NavItem } from "react-bootstrap";
 import { Link } from 'react-router-dom';
 import { user } from './Jwt.js';
@@ -10,29 +12,34 @@ import { user } from './Jwt.js';
 class NaviBar extends Component {
     render() {
         return (
-            <Navbar default collapseOnSelect>
-                <Navbar.Header>
-                    <Navbar.Brand>
-                        <Link to="/">BoligRunner</Link>
-                        <div>Logged in as: {user}</div>
-                    </Navbar.Brand>
-                </Navbar.Header>
-                <Nav className='nav'>
-                    <NavItem eventKey={1} componentClass={Link} href="/" to="/">
-                        <b>Home</b>
-                    </NavItem>
-                    <NavItem eventKey={2} componentClass={Link} href="/Login" to="/Login">
-                        <b>Login</b>
-                    </NavItem>                    
-                    <NavItem eventKey={4} componentClass={Link} href="/DataTable" to="/DataTable">
-                        <b>Table</b>
-                    </NavItem>
-                    <NavItem eventKey={5} componentClass={Link} href="/ResidenceList" to="/ResidenceList">
-                        <b>Residences</b>
-                    </NavItem>
-                </Nav>
-            </Navbar>
-        );
+            <nav class="navbar navbar-expand-lg bg-white fixed-top">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="/"><img src={logo2} />
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarResponsive" aria-controls="navbarResponsive"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarResponsive">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item active"><a class="nav-link" href="/">Home
+							<span class="sr-only">(current)</span> </a></li>
+                            <li class="nav-item"><a class="nav-link" href="Find">Søg
+							bolig</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Udlej
+							bolig</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Lejekontrakter</a>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="Register">Opret
+							bruger</a></li>
+                            <li class="nav-item"><a class="nav-link" href="Login">Log ind</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        )
     }
 }
 //CSS'en forbundet til App.css

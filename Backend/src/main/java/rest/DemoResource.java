@@ -50,9 +50,9 @@ public class DemoResource {
     public String getAllHousing() {
         return gson.toJson(DataFacade.getInstance().getAllHousing());
     }
-
+ 
     @PUT
-    @Path("/Housing/{id}")
+    @Path("{id}")
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public Response putJson(String content, @PathParam("id") int id) {
@@ -63,7 +63,7 @@ public class DemoResource {
     }
 
     @DELETE
-    @Path("/Housing/{id}")
+    @Path("{id}")
     @Produces(MediaType.APPLICATION_JSON)
     public Response deleteCustomer(@PathParam("id") int id) {
         Housing h = DataFacade.getInstance().deleteHousing(id);       

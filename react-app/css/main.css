@@ -1,0 +1,501 @@
+/*!
+ * Start Bootstrap - 3 Col Portfolio (https://startbootstrap.com/template-overviews/3-col-portfolio)
+ * Copyright 2013-2018 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-3-col-portfolio/blob/master/LICENSE)
+ */
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+body {
+  padding-top: 54px;
+  font:roboto;
+}
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 56px;
+  }
+}
+
+@media (min-width: 992px){
+  .col-lg-custom {
+    -ms-flex: 0 0 20%;
+    flex: 0 0 20%;
+    max-width: 20%;
+    padding:5px;
+  }
+  
+  .custom-form-control{
+	padding:12px 15px;
+    border-radius: 3px;
+    color: #474747!important;
+    width: 100%;
+    border: none;
+    display: inline-block;
+    font-size: 18px;
+    padding: 8px 15px;
+    position: relative;
+    line-height: 31px;
+    vertical-align: middle;
+    width:60%;
+  }
+	
+  .btn{
+	padding:12px 15px;
+	display: inline-block;
+  }
+  
+  .btn .find{
+    background:#D84141!important;
+  }
+  
+  .listing-selection .filter-header{
+   	padding-bottom: 0;
+    margin-bottom: 0;
+    height: 35px;
+  }
+  
+}
+
+@media (max-width: 992px){
+.col-lg-custom {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding:5px;
+  }
+  
+  .custom-form-control{
+	padding:12px 15px;
+    border-radius: 3px;
+    color: #474747!important;
+    width: 100%;
+    border: none;
+    display: inline-block;
+    font-size: 18px;
+    padding: 8px 15px;
+    position: relative;
+    line-height: 31px;
+    vertical-align: middle;
+    width:100%;
+  }
+	
+  .btn{
+	padding:12px 15px;
+	display: inline-block;
+	width:100%;
+  }
+  
+  .btn .find{
+    background:#D84141;
+  }
+  
+  .listing-selection .filter-header{
+   	padding-bottom: 0;
+    margin-bottom: 10px;
+    height: 35px;
+    width:100%!important;
+    text-align:center;
+  }
+}
+.listing-details a{
+	color:#555!important;
+}
+
+.info-box-2 .portfolio-item {
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.info-box .portfolio-item {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.portfolio-item .card-text{
+  /*text-align: justify;*/
+}
+
+.portfolio-item .card-title a{
+  color:#D84141;
+}
+.pagination {
+  margin-bottom: 30px;
+}
+
+.navbar-brand img{
+   width:150px;	
+}
+
+/** Navbar Styling**/
+
+.navbar-nav .nav-item{
+	padding:5px;
+	border-left:1px solid #dadada;
+	min-width:100px;
+	text-align:center;		
+}
+
+.navbar-nav .nav-item.active a{
+	color:#D84141;	
+}
+.navbar-nav .nav-item a{
+	color:#999;		
+}
+.navbar-nav .nav-item a:hover{
+	color:#D84141;		
+}
+
+.navbar-collapse{
+    margin-top: 0px;
+}
+.navbar-brand{
+    margin-top: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+.navbar-brand img {
+    top: 0px;
+    position: relative;
+}
+
+.navbar{
+    padding:0!important;	
+    border-bottom:1px solid #dadada;
+}
+
+/** Page banner**/
+
+#pagebanner {
+    padding: 45px 0 150px 0;
+    background: #43725b url(../images/dark-living-room-theme.jpg) top right no-repeat;
+    background-size: cover;
+    background-position:40% 40%;
+    margin-top: -5px;
+}
+#pagebanner .row{
+    padding-top:70px;	
+    position:relative;
+}
+
+
+.Frontpage__top-header {
+    color: #fff;
+    text-shadow: 0 0 10px rgba(0,0,0,.9);
+    text-shadow: 0 2px 0 rgba(0,0,0,.5), 0 0 35px rgba(0,0,0,.7);
+    text-align:center;
+    text-indent:-40px;
+}
+
+/** Info Box Styling**/
+
+.info-box{
+    padding-top:50px;
+    background:#f7f7f7;	
+}
+
+.info-box-2{
+	padding-top:50px;
+	padding-bottom:50px;
+}
+
+.info-details-box-1{
+	padding-top: 10px;
+    padding-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    margin-bottom: 15px;
+}
+
+.info-details-box-2{
+	padding-top: 10px;
+    padding-bottom: 20px;
+
+    margin-bottom: 15px;
+}
+
+.Frontpage__cities-item__name {
+    padding-left: 7px;
+    padding-right: 7px;
+    color: #fff;
+    line-height: inherit;
+    font-size: inherit;
+    position: absolute;
+    z-index: 1;
+    font-weight: 600;
+    text-shadow: 0 2px 0 rgba(0,0,0,.6);
+    background-color: rgba(0,0,0,.25);
+    transition: background-color .3s;
+    display: block;
+}
+
+/*** Login Form***/
+
+#login{
+  margin-top:70px;	
+  margin-bottom:100px;	
+}
+
+.loginmodal-container {
+  padding: 30px;
+  max-width: 350px;
+  width: 100% !important;
+  background-color: #F7F7F7;
+  margin: 0 auto;
+  border-radius: 2px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  font-family: roboto;
+}
+
+.loginmodal-container h1 {
+  text-align: center;
+  font-size: 1.8em;
+  font-family: roboto;
+}
+
+.loginmodal-container input[type=submit] {
+  width: 100%;
+  display: block;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.loginmodal-container input[type=text], input[type=password] {
+  height: 44px;
+  font-size: 16px;
+  width: 100%;
+  margin-bottom: 10px;
+  -webkit-appearance: none;
+  background: #fff;
+  border: 1px solid #d9d9d9;
+  border-top: 1px solid #c0c0c0;
+  /* border-radius: 2px; */
+  padding: 0 8px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+.loginmodal-container input[type=text]:hover, input[type=password]:hover {
+  border: 1px solid #b9b9b9;
+  border-top: 1px solid #a0a0a0;
+  -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.loginmodal {
+  text-align: center;
+  font-size: 14px;
+  font-family: 'Arial', sans-serif;
+  font-weight: 700;
+  height: 36px;
+  padding: 0 8px;
+/* border-radius: 3px; */
+/* -webkit-user-select: none;
+  user-select: none; */
+}
+
+.loginmodal-submit:hover {
+  /* border: 1px solid #2f5bb7; */
+  border: 0px;
+  text-shadow: 0 1px rgba(0,0,0,0.3);
+  background-color: #357ae8;
+  /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#357ae8)); */
+}
+
+.loginmodal-container a {
+  text-decoration: none;
+  color: #666;
+  font-weight: 400;
+  text-align: center;
+  display: inline-block;
+  opacity: 0.6;
+  transition: opacity ease 0.5s;
+} 
+
+.login-help{
+  font-size: 12px;
+}
+
+/*** House Listings Form***/
+
+#listings{
+  margin-top:20px;	
+  margin-bottom:100px;	
+}
+
+#listings .card{
+  margin-bottom:20px;	
+}
+
+fieldset{
+  margin-bottom:10px;	
+}
+
+
+/** Find Page **/
+.wrapper{
+  width:100%;
+}
+@media(max-width:992px){
+ .wrapper{
+  width:100%;
+} 
+}
+.panel-heading {
+  padding: 0;
+	border:0;
+}
+.panel-title>a, .panel-title>a:active{
+	display:block;
+	padding:15px;
+	padding-bottom: 0;
+	color:#999;
+	font-size:16px;
+	/*text-transform:uppercase;*/
+	letter-spacing:1px;
+    word-spacing:3px;
+	text-decoration:none;
+}
+
+.panel-heading .collapsed:before {
+    content: "\f0dd";  /* this is your text. You can also use UTF-8 character codes as I do here */
+    font-family: "FontAwesome";
+    float: right;
+    transition: all 0.5s;
+    color: #e5e5e5;
+}
+
+.panel-heading a:before {
+   content: "\f0de";  /* this is your text. You can also use UTF-8 character codes as I do here */
+   font-family: "FontAwesome";
+   float: right;
+   transition: all 0.5s;
+   color: #e5e5e5;
+}
+
+.panel-body {
+    margin-left: 10px;
+    margin-right: 10px;
+    border: 1px solid #f1f0f0;
+    border-radius:2px; 
+    padding:10px;
+}
+
+#search{
+    width:89%;
+    margin-left:15px;
+    margin-right:30px;
+    padding:5px;
+    margin-top:15px;	
+}
+#search i{
+   margin-right:10px;	
+}
+
+.collapsed .fa-sort-desc{
+ 
+    display:none;
+		
+}
+
+.collapsed .fa-sort-asc{
+ 
+    display:block;
+		
+}
+
+.truncate {
+  width: 80%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dropdown button{
+   padding: 5px;
+   background:#ffffff;
+   color:#888;
+   border:1px solid #e5e5e5;	
+}
+
+.Card__price {
+    color: #fff;
+    position: absolute;
+    background: rgba(0,0,0,.5);
+    bottom: 10px;
+    font-size: 16px;
+    right: 0;
+    padding: 10px;
+    z-index: 10;
+    top: 0px;
+    height: 40px;
+}
+
+
+.listing-selection #dropdownMenuButton{
+    padding: 6px;
+}
+
+.listing-selection .results-count{
+	color: #D84141;
+    margin-top: 9px;
+}
+
+#listings .card{
+    font-weight:100;	
+}
+#listings .card-body img{
+    width: 40px;
+    position: absolute;
+    right: 1.1em;
+    bottom: 2.5em;
+    width: 2.5em;
+}
+#listings .card-title {
+    margin-bottom: .10rem!important;
+    font-weight: 400;
+    font-size:16px;
+}
+#listings .card-text {
+    font-size:12px;
+}
+
+.complementary {
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f9f9f9+1,ffffff+19,ffffff+73,ffffff+100,207cca+100,ffffff+100 */
+background: #f9f9f9; /* Old browsers */
+background: -moz-linear-gradient(top, #f9f9f9 1%, #ffffff 19%, #ffffff 73%, #ffffff 100%, #207cca 100%, #ffffff 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #f9f9f9 1%,#ffffff 19%,#ffffff 73%,#ffffff 100%,#207cca 100%,#ffffff 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #f9f9f9 1%,#ffffff 19%,#ffffff 73%,#ffffff 100%,#207cca 100%,#ffffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+border-radius:5px;
+}
+
+#listings .complementary {
+	border-right: 1px solid #F5F3F3;
+}
+
+
+#carouselExampleIndicators {
+    margin:0 auto;	
+}
+.carousel-item{
+	text-align:center;	
+    height: 300px;
+}
+.d-block{
+	height: 100%;
+    width: auto;
+}
+
+#detailsbanner{
+	background:#f7f7f7;
+    height: 300px;
+    overflow: hidden;	
+}
+
+.contact-landlord{
+	font-size:1rem;
+}
+
+.contact-landlord i{
+	width:25px;
+}

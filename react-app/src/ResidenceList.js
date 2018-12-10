@@ -1,15 +1,17 @@
 import React, { Component } from "react"
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import BootstrapTable from 'react-bootstrap-table-next';
-import cellEditFactory from 'react-bootstrap-table2-editor';
 import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
 import filterFactory, { textFilter } from 'react-bootstrap-table2-filter';
 import paginationFactory from 'react-bootstrap-table2-paginator';
 import cellEditFactory from 'react-bootstrap-table2-editor';
+import afterSaveCell from 'react-bootstrap-table2-editor';
+import facade from "./apiFacade";
 //import { Type } from 'react-bootstrap-table2-editor';
 
 
-const URL = "http://localhost:8084/jwtbackend/api/info/Housing"; //Indsæt URL for API
+const URL = "http://localhost:8084/jwtbackend/api/info/Housing/"; //Indsæt URL for API
+const URL2 = "http://localhost:8084/jwtbackend/api/info/"; //Indsæt URL for API
 
 const labels = [{
     dataField: 'address',
@@ -72,12 +74,12 @@ const labels = [{
     sort: true,
     filter: textFilter()
 },
- /*{
+ {
     dataField: 'deposit',
     text: 'Depositum',
     sort: true,
     filter: textFilter()
-}, {
+ }/*, {
     dataField: 'aconto',
     text: 'Aconto',
     sort: true,
@@ -104,10 +106,9 @@ class ResidenceList extends Component {
 
         this.setState({ residence, msg: "" });
     }
+
     render() {
-        const cellEdit = cellEditFactory({
-            mode: 'click',
-        });
+
         return <div>
             <h4>Boliger</h4>
             <BootstrapTable
@@ -119,7 +120,12 @@ class ResidenceList extends Component {
                 columns={labels}
                 filter={filterFactory()}
                 pagination={paginationFactory()}
-                cellEdit={cellEditFactory({mode: 'dbclick'})}
+                cellEdit={cellEditFactory({
+                    mode: 'dbclick', afterSaveCell: (o, n, r) => {
+                        const options = facade.makeOptions("PUT", true, r );
+                        fetch(URL2 + r.id, options, console.log(r));                  
+                    }
+                })}
             />
         </div>
     }
